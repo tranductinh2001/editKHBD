@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KHBD Pro - Chuẩn Hoá Giáo Án THCS Theo Mẫu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="dark-theme">
+  <div class="app-container">
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="brand-logo">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title-wrap">
+            <h1 class="brand-title">KHBD Pro</h1>
+            <span class="badge badge-accent">Chuẩn Mẫu THCS</span>
+          </div>
+          <p class="brand-subtitle">Trình Chuẩn Hoá Mẫu & Đổi Tên Kế Hoạch Bài Dạy THCS Hàng Loạt</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-open-explorer" class="btn btn-secondary" title="Mở thư mục trên máy tính">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Mở Thư Mục
+        </button>
+        <button id="btn-theme-toggle" class="btn btn-icon" title="Đổi giao diện sáng/tối">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="btn-help-modal" class="btn btn-icon" title="Hướng dẫn sử dụng">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <!-- Top Control Bar Card -->
+      <section class="card control-card">
+        <div class="control-grid">
+          <!-- Folder Path -->
+          <div class="form-group col-span-2">
+            <label class="form-label" for="input-folder-path">
+              <span>Thư mục chứa giáo án (KHBD)</span>
+              <span class="label-hint">Đường dẫn folder chứa các file .docx</span>
+            </label>
+            <div class="input-with-btn">
+              <input type="text" id="input-folder-path" class="form-input" placeholder="c:\Users\X1\Desktop\edit_KHBD">
+              <button id="btn-scan" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg>
+                Quét Thư Mục
+              </button>
+            </div>
+          </div>
+
+          <!-- PPCT Selector -->
+          <div class="form-group">
+            <label class="form-label" for="select-ppct-file">
+              <span>Phân phối chương trình (PPCT)</span>
+              <span class="label-hint">Khớp bài, tuần, tiết</span>
+            </label>
+            <select id="select-ppct-file" class="form-select">
+              <option value="_Lop_9.xlsx" selected>Tin học Lớp 9 (_Lop_9.xlsx)</option>
+            </select>
+          </div>
+
+          <!-- Naming Scheme -->
+          <div class="form-group">
+            <label class="form-label" for="select-naming-scheme">
+              <span>Quy tắc đổi tên file mới</span>
+              <span class="label-hint">Tự động sinh theo PPCT</span>
+            </label>
+            <select id="select-naming-scheme" class="form-select">
+              <option value="ppct_slug" selected>Theo PPCT: tinhoc9_tuan01_Bai01_The-Gioi...docx</option>
+              <option value="ppct_exact">Theo cột Ghi chú PPCT Excel</option>
+              <option value="teacher">Theo Mẫu GV: Le Thi Phuong Thao_Tin 9_Tuan 01...docx</option>
+              <option value="custom">Tuỳ biến cú pháp riêng</option>
+            </select>
+          </div>
+
+          <!-- Output Mode -->
+          <div class="form-group col-span-2">
+            <label class="form-label" for="select-output-mode">
+              <span>Chế độ lưu kết quả</span>
+              <span class="label-hint">Đảm bảo an toàn dữ liệu</span>
+            </label>
+            <select id="select-output-mode" class="form-select">
+              <option value="new_folder" selected>⭐ Xuất ra thư mục mới: KHBD_DaSua/ (Giữ nguyên file gốc)</option>
+              <option value="inplace">Sửa và đổi tên trực tiếp (Tự động sao lưu bản gốc vào _backup/)</option>
+            </select>
+          </div>
+
+          <!-- Template Preset -->
+          <div class="form-group col-span-2">
+            <label class="form-label" for="select-template-style">
+              <span>Mẫu Kế Hoạch Bài Dạy áp dụng</span>
+              <span class="label-hint">Định dạng bố cục</span>
+            </label>
+            <select id="select-template-style" class="form-select">
+              <option value="mau_thcs" selected>⭐ Mẫu Chuẩn THCS (Mau KHBD THCS.docx: Bảng 1x2 trên cùng, TÊN BÀI DẠY, Duyệt cuối bài)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Action & Stats Banner -->
+      <section class="action-banner">
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-label">Tổng File Giáo Án</span>
+            <span id="stat-total-files" class="stat-value">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Đã Khớp PPCT</span>
+            <span id="stat-matched-files" class="stat-value stat-success">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Đang Chọn Render</span>
+            <span id="stat-selected-files" class="stat-value stat-primary">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Đã Hoàn Thành</span>
+            <span id="stat-done-files" class="stat-value stat-done">0</span>
+          </div>
+        </div>
+
+        <div class="master-action-box">
+          <button id="btn-batch-process" class="btn btn-master">
+            <div class="btn-master-content">
+              <span class="btn-master-icon">⚡</span>
+              <div class="btn-master-text">
+                <span class="btn-master-title">BẮT ĐẦU RENDER & ĐỔI TÊN HÀNG LOẠT (1-CLICK)</span>
+                <span class="btn-master-sub">Áp dụng mẫu Mau KHBD THCS.docx: Bảng 1x2 đầu trang, Tên bài dạy, căn lề A4, header, footer & duyệt chuyên môn</span>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Progress Bar & Status -->
+        <div id="progress-container" class="progress-container hidden">
+          <div class="progress-header">
+            <span id="progress-label" class="progress-label">Đang xử lý: 0/0</span>
+            <span id="progress-percentage" class="progress-percentage">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Live Terminal Log -->
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">Nhật ký xử lý hệ thống (Console Logs)</span>
+            <button id="btn-clear-log" class="btn-text">Xoá log</button>
+          </div>
+          <div id="terminal-body" class="terminal-body">
+            <div class="log-line log-info">🟢 [Hệ thống] Sẵn sàng render theo chuẩn Mau KHBD THCS.docx. Hãy bấm "Quét Thư Mục" hoặc "Bắt đầu render hàng loạt".</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs Navigation -->
+      <nav class="tabs-nav">
+        <button class="tab-btn active" data-tab="tab-files">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          Danh Sách Giáo Án (<span id="tab-count-files">0</span>)
+        </button>
+        <button class="tab-btn" data-tab="tab-config">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+          Giao Diện Trực Quan Điều Chỉnh Mẫu
+        </button>
+        <button class="tab-btn" data-tab="tab-ppct">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+          Bảng Phân Phối Chương Trình
+        </button>
+        <button class="tab-btn" data-tab="tab-ai">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          Trợ Lý AI (Kế Hoạch Mở Rộng)
+        </button>
+      </nav>
+
+      <!-- TAB 1: Files Table -->
+      <section id="tab-files" class="tab-panel active">
+        <div class="card table-card">
+          <div class="table-toolbar">
+            <div class="table-toolbar-left">
+              <label class="checkbox-container">
+                <input type="checkbox" id="check-select-all" checked>
+                <span class="checkmark"></span>
+                <span>Chọn tất cả</span>
+              </label>
+              <span class="toolbar-divider">|</span>
+              <span id="selected-summary-text" class="text-muted">Đang chọn: 0 file</span>
+              <button id="btn-batch-ai-fix" class="btn btn-ai" title="Dùng Beekone AI đọc nội dung giáo án, nhận diện chính xác tên bài, số bài, tuần, tiết theo PPCT">
+                <span class="btn-ai-icon">🤖</span>
+                <span>Beekone AI Chuẩn Hoá Tên Bài</span>
+              </button>
+            </div>
+            <div class="table-toolbar-right">
+              <input type="text" id="input-search-file" class="form-input search-input" placeholder="🔍 Tìm kiếm file giáo án...">
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="table-files">
+              <thead>
+                <tr>
+                  <th width="40"></th>
+                  <th>Tên File Hiện Tại</th>
+                  <th>Tuần & Tiết Dạy</th>
+                  <th>Tên Bài Dạy (Khớp PPCT)</th>
+                  <th>Tên File Mới Sau Khi Đổi</th>
+                  <th>Trạng Thái</th>
+                  <th width="150" class="text-right">Thao Tác</th>
+                </tr>
+              </thead>
+              <tbody id="table-files-body">
+                <tr>
+                  <td colspan="7" class="text-center py-8 text-muted">
+                    Chưa quét thư mục. Vui lòng bấm <strong>"Quét Thư Mục"</strong> ở trên để bắt đầu!
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: Visual Config Studio -->
+      <section id="tab-config" class="tab-panel">
+        <div class="visual-studio-grid">
+          <!-- Left: Controls Form -->
+          <div class="card config-controls-col">
+            <h2 class="card-title">Bảng Điều Chỉnh Thông Số Giáo Án</h2>
+            <p class="card-desc">Tất cả thay đổi tại đây sẽ cập nhật trực tiếp vào trang mô phỏng A4 bên phải và áp dụng khi render hàng loạt giáo án.</p>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-teacher-name">Họ và tên giáo viên</label>
+              <input type="text" id="cfg-teacher-name" class="form-input" value="Lê Thị Phương Thảo">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-department">Tổ chuyên môn</label>
+              <input type="text" id="cfg-department" class="form-input" value="Tổ Tự Nhiên">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-school-name">Tên trường học</label>
+              <input type="text" id="cfg-school-name" class="form-input" value="Trường TH&THCS Đăk Trôi">
+            </div>
+
+            <div class="config-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="cfg-school-year">Năm học</label>
+                <input type="text" id="cfg-school-year" class="form-input" value="2025-2026">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cfg-subject">Môn học</label>
+                <input type="text" id="cfg-subject" class="form-input" value="Tin học">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-subject-type">
+                <span>Loại hình hiển thị (Môn học / HĐGD)</span>
+                <span class="label-hint">Môn thường: "Môn học" | HĐTN: "Hoạt động giáo dục"</span>
+              </label>
+              <select id="cfg-subject-type" class="form-select">
+                <option value="auto" selected>⚡ Tự động (Môn thường: "Môn học" | HĐTN: "Hoạt động giáo dục")</option>
+                <option value="mon_hoc">Chỉ dùng "Môn học" (Môn văn hóa thông thường)</option>
+                <option value="hoat_dong_giao_duc">Chỉ dùng "Hoạt động giáo dục" (HĐTN, Hướng nghiệp)</option>
+              </select>
+            </div>
+
+            <div class="config-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="cfg-classes">Lớp áp dụng</label>
+                <input type="text" id="cfg-classes" class="form-input" value="9">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cfg-duration">Thời gian thực hiện (tiết)</label>
+                <input type="text" id="cfg-duration" class="form-input" value="2">
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="section-title">Lịch Tuần & Ngày Dạy Thực Tế (Thứ 2 - Thứ 6)</h3>
+            <p class="card-desc" style="margin-top:-6px;margin-bottom:12px;">Tự động tính ngày dạy từ Thứ 2 đến Thứ 6 theo từng tuần thực tế để điền vào giáo án và bảng PPCT.</p>
+
+            <div class="config-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="cfg-start-date">
+                  <span>Ngày bắt đầu Tuần 1 (Thứ 2)</span>
+                  <span class="label-hint">Mốc tính ngày các tuần</span>
+                </label>
+                <input type="date" id="cfg-start-date" class="form-input" value="2026-09-07">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cfg-date-format">
+                  <span>Định dạng ngày dạy</span>
+                  <span class="label-hint">Hiển thị trong giáo án</span>
+                </label>
+                <select id="cfg-date-format" class="form-select">
+                  <option value="d2_to_d6" selected>Thứ 2 - Thứ 6 (07/09/2026 - 11/09/2026)</option>
+                  <option value="tu_den">Từ 07/09 đến 11/09/2026</option>
+                  <option value="d2_only">Chỉ ngày Thứ 2 (07/09/2026)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-auto-date" checked>
+                <span class="checkmark"></span>
+                <span>Tự động tính ngày dạy thực tế theo tuần (T2 - T6)</span>
+              </label>
+            </div>
+
+            <div class="form-group" style="margin-top: 8px;">
+              <label class="form-label" for="cfg-teaching-date">Mẫu hiển thị ngày dạy thủ công (khi tắt tự tính)</label>
+              <input type="text" id="cfg-teaching-date" class="form-input" value="../../2026">
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="section-title">Người Ký Duyệt Cuối Bài (Kéo Thả Nhanh)</h3>
+            <p class="card-desc" style="margin-top:-6px;margin-bottom:10px;">Kéo thả tên nhân sự vào ô người ký hoặc click vào tên để gán nhanh mà không cần gõ lại!</p>
+
+            <div class="signers-pool-container">
+              <div class="pool-header">
+                <span class="pool-label">Danh sách nhân sự (Kéo thả vào ô dưới):</span>
+                <button id="btn-add-signer" class="btn-text" type="button">+ Thêm tên</button>
+              </div>
+              <div id="signers-badges-pool" class="signers-badges-pool">
+                <!-- Draggable Signer Chips -->
+              </div>
+            </div>
+
+            <div class="config-grid-2" style="margin-top: 14px;">
+              <div class="form-group">
+                <label class="form-label" for="cfg-signer-school">
+                  <span>Duyệt của Chuyên môn (BGH)</span>
+                  <span class="label-hint">Kéo tên hoặc nhập tại đây</span>
+                </label>
+                <div class="drop-zone-wrap" id="dropzone-school">
+                  <input type="text" id="cfg-signer-school" class="form-input drop-target" placeholder="Kéo tên hoặc nhập..." value="Nguyễn Văn Cường">
+                  <div class="drop-hint">Thả tên vào đây ⬇</div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cfg-signer-dept">
+                  <span>Duyệt của Tổ chuyên môn</span>
+                  <span class="label-hint">Kéo tên hoặc nhập tại đây</span>
+                </label>
+                <div class="drop-zone-wrap" id="dropzone-dept">
+                  <input type="text" id="cfg-signer-dept" class="form-input drop-target" placeholder="Kéo tên hoặc nhập..." value="Lê Thị Hương">
+                  <div class="drop-hint">Thả tên vào đây ⬇</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-title-prefix">Tiền tố tên bài</label>
+              <input type="text" id="cfg-title-prefix" class="form-input" value="TÊN BÀI DẠY: ">
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="section-title">Tuỳ Chọn Hiển Thị Mẫu</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-opt-header" checked>
+                <span class="checkmark"></span>
+                <span>Bật Header đầu trang (Kế hoạch bài dạy [Môn] [Lớp], năm học [Năm học])</span>
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-opt-footer" checked>
+                <span class="checkmark"></span>
+                <span>Bật Footer chân trang ([Tên GV] - [Tên trường])</span>
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-opt-approval" checked>
+                <span class="checkmark"></span>
+                <span>Thêm khối "Duyệt của Chuyên môn / Duyệt của tổ chuyên môn" ở cuối bài</span>
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-opt-border">
+                <span class="checkmark"></span>
+                <span>Hiển thị đường viền bảng thông tin 1x2 (Mặc định: Ẩn viền theo mẫu)</span>
+              </label>
+            </div>
+
+            <div class="config-actions">
+              <button id="btn-save-config" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                  <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                  <polyline points="7 3 7 8 15 8"></polyline>
+                </svg>
+                Lưu Cấu Hình
+              </button>
+              <span id="save-config-status" class="status-msg hidden">Đã lưu cấu hình thành công!</span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Live Visual Sheet (A4 Preview) -->
+          <div class="card visual-preview-col">
+            <div class="preview-card-header">
+              <div class="preview-badge">Trực Quan Mẫu: Mau KHBD THCS.docx</div>
+              <span class="text-sm text-muted">Mô phỏng bố cục trang Word thực tế</span>
+            </div>
+
+            <div class="a4-sheet-wrapper">
+              <div class="a4-sheet" id="live-a4-sheet">
+                <!-- Header (Italic top) -->
+                <div class="sheet-header" id="pv-header">
+                  Kế hoạch bài dạy Tin học 9, năm học 2025-2026
+                </div>
+
+                <!-- Table 1x2 at Top -->
+                <table class="sheet-table-top" id="pv-table">
+                  <tr>
+                    <td class="col-left">
+                      <div class="cell-line" id="pv-tuan">Tuần: 1</div>
+                      <div class="cell-line" id="pv-tiet">Tiết: 1, 2</div>
+                      <div class="cell-line" id="pv-date">Ngày dạy: ../../2026</div>
+                    </td>
+                    <td class="col-right">
+                      <div class="cell-line" id="pv-teacher">Họ và tên giáo viên: Lê Thị Phương Thảo</div>
+                      <div class="cell-line" id="pv-dept">Tổ chuyên môn: Tổ Tự Nhiên</div>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Title Block -->
+                <div class="sheet-title-block">
+                  <div class="sheet-title-main" id="pv-title">
+                    TÊN BÀI DẠY: BÀI 1. THẾ GIỚI KĨ THUẬT SỐ
+                  </div>
+                  <div class="sheet-sub" id="pv-subject-class">
+                    Môn học: Tin học; lớp: 9
+                  </div>
+                  <div class="sheet-sub" id="pv-duration">
+                    Thời gian thực hiện: 2 tiết
+                  </div>
+                </div>
+
+                <!-- Simulated Document Content -->
+                <div class="sheet-body-content">
+                  <div class="sheet-h1">I. Mục tiêu</div>
+                  <div class="sheet-p"><strong>1. Về kiến thức:</strong> Nêu cụ thể nội dung kiến thức học sinh cần học trong bài theo yêu cầu cần đạt của nội dung giáo dục/chủ đề tương ứng trong chương trình môn học/hoạt động giáo dục...</div>
+                  <div class="sheet-p"><strong>2. Về năng lực:</strong> Nêu cụ thể yêu cầu học sinh làm được gì trong hoạt động học để chiếm lĩnh và vận dụng kiến thức...</div>
+                  <div class="sheet-p"><strong>3. Về phẩm chất:</strong> Nêu cụ thể yêu cầu về hành vi, thái độ của học sinh trong quá trình học tập...</div>
+                  <div class="sheet-h1">II. Thiết bị dạy học và học liệu</div>
+                  <div class="sheet-p">Nêu cụ thể các thiết bị dạy học và học liệu được sử dụng trong bài dạy...</div>
+                  <div class="sheet-h1">III. Tiến trình dạy học</div>
+                  <div class="sheet-p"><strong>1. Hoạt động 1: Mở đầu</strong> [5 phút]</div>
+                  <div class="sheet-p"><strong>2. Hoạt động 2: Hình thành kiến thức mới</strong> [30 phút]</div>
+                  <div class="sheet-p"><strong>3. Hoạt động 3: Luyện tập</strong> [7 phút]</div>
+                  <div class="sheet-p"><strong>4. Hoạt động 4: Vận dụng</strong> [3 phút]</div>
+                </div>
+
+                <!-- Approval Block at Bottom -->
+                <div class="sheet-approval" id="pv-approval">
+                  <div class="approval-col">
+                    <div class="app-title">Duyệt của Chuyên môn</div>
+                    <div class="app-note" id="pv-note-school">(Ký và ghi rõ họ tên)</div>
+                    <div class="app-space"></div>
+                    <div class="app-name" id="pv-signer-school">Nguyễn Văn Cường</div>
+                  </div>
+                  <div class="approval-col">
+                    <div class="app-title">Duyệt của tổ chuyên môn</div>
+                    <div class="app-note" id="pv-note-dept">(Ký và ghi rõ họ tên)</div>
+                    <div class="app-space"></div>
+                    <div class="app-name" id="pv-signer-dept">Lê Thị Hương</div>
+                  </div>
+                </div>
+
+                <!-- Footer (Italic bottom right) -->
+                <div class="sheet-footer" id="pv-footer">
+                  Lê Thị Phương Thảo - Trường TH&THCS Đăk Trôi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 3: PPCT Viewer -->
+      <section id="tab-ppct" class="tab-panel">
+        <div class="card table-card">
+          <div class="table-toolbar">
+            <div class="table-toolbar-left">
+              <span id="ppct-title-display" class="font-bold">Bảng Phân Phối Chương Trình</span>
+            </div>
+            <div class="table-toolbar-right" style="display:flex;gap:10px;align-items:center;">
+              <input type="text" id="input-search-ppct" class="form-input search-input" placeholder="🔍 Lọc bài học, tuần, tiết...">
+              <button id="btn-sync-ppct-dates" class="btn btn-secondary" style="white-space:nowrap;padding:7px 14px;font-size:13px;" title="Tính toán lại và ghi ngày dạy trực tiếp vào các file Excel PPCT">
+                📅 Ghi Ngày Vào Excel PPCT
+              </button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="table-ppct">
+              <thead>
+                <tr>
+                  <th width="50">STT</th>
+                  <th width="65">Tuần</th>
+                  <th width="75">Tiết</th>
+                  <th>Tên Bài Học</th>
+                  <th width="190">Ngày Dạy Thực Tế (T2 - T6)</th>
+                  <th>Tên File / Ghi Chú</th>
+                </tr>
+              </thead>
+              <tbody id="table-ppct-body">
+                <tr>
+                  <td colspan="6" class="text-center py-6 text-muted">Đang tải bảng phân phối chương trình...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: AI Assistant (Beekone AI) -->
+      <section id="tab-ai" class="tab-panel">
+        <div class="card ai-card">
+          <div class="ai-header">
+            <div class="ai-badge">Trí Tuệ Nhân Tạo Beekone AI</div>
+            <h2 class="card-title">Tích Hợp Beekone AI (Đồng Bộ Chuẩn Dự Án Flow GG)</h2>
+            <p class="card-desc">Sử dụng API Beekone Platform (chạy mô hình Gemini 2.5 Flash Lite) để phân tích tài liệu Word, tự động nhận diện chính xác Tên bài, Số bài, Chủ đề, đối chiếu PPCT và thẩm định sư phạm.</p>
+          </div>
+
+          <div class="config-grid">
+            <div class="form-group col-span-2">
+              <label class="form-label" for="cfg-ai-endpoint">
+                <span>Beekone API Base URL</span>
+                <span class="label-hint">Địa chỉ máy chủ API Beekone</span>
+              </label>
+              <input type="text" id="cfg-ai-endpoint" class="form-input" value="https://platform.beeknoee.com/api/v1">
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label" for="cfg-ai-key">
+                <span>Beekone API Key</span>
+                <span class="label-hint">Khóa API Beekone (sk-bee-...)</span>
+              </label>
+              <div style="display:flex; gap:10px;">
+                <input type="password" id="cfg-ai-key" class="form-input" style="flex:1;" placeholder="sk-bee-...">
+                <button type="button" id="btn-toggle-key-vis" class="btn btn-secondary" style="padding:0 12px;" title="Hiện/ẩn khóa API">👁️</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cfg-ai-model">Mô hình AI</label>
+              <select id="cfg-ai-model" class="form-select">
+                <option value="gemini-2.5-flash-lite" selected>⚡ Gemini 2.5 Flash Lite (Siêu nhanh, tối ưu bóc tách kịch bản & giáo án)</option>
+                <option value="gemini-2.5-flash">Gemini 2.5 Flash (Tiêu chuẩn)</option>
+                <option value="gemini-2.5-pro">Gemini 2.5 Pro (Suy luận sâu, chi tiết)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="display:flex; align-items:flex-end;">
+              <button id="btn-test-ai" type="button" class="btn btn-secondary" style="width:100%; height:42px; display:flex; align-items:center; justify-content:center; gap:6px;">
+                <span>⚡ Kiểm Tra Kết Nối Beekone API</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="ai-test-result" class="hidden" style="margin-top:12px; padding:10px 14px; border-radius:8px; font-size:13px;"></div>
+
+          <div class="ai-features-box">
+            <h3 class="section-title">Các tính năng thông minh bằng Beekone AI:</h3>
+            <div class="feature-item">
+              <input type="checkbox" id="ai-opt-auto-title" checked>
+              <label for="ai-opt-auto-title">
+                <strong>🤖 Tự động phân tích & sửa nhận diện Tên Bài (Chuẩn hoá theo PPCT):</strong>
+                <span>Khi giáo án gốc đặt tên lộn xộn hoặc nhận diện sai bài, Beekone AI sẽ đọc phần mở đầu và đối chiếu bảng PPCT để điền lại Tên bài, Số bài, Tuần, Tiết chuẩn xác 100%.</span>
+              </label>
+            </div>
+            <div class="feature-item">
+              <input type="checkbox" id="ai-opt-nls" checked>
+              <label for="ai-opt-nls">
+                <strong>Tự động thêm mục tiêu Năng Lực Số (NLS):</strong>
+                <span>Tự động phát hiện và chèn các mã chuẩn năng lực số (ví dụ: NLS 1.1, NLS 2.3) vào phần Mục Tiêu.</span>
+              </label>
+            </div>
+            <div class="feature-item">
+              <input type="checkbox" id="ai-opt-5512" checked>
+              <label for="ai-opt-5512">
+                <strong>Kiểm tra 4 bước Công văn 5512 & Thẩm định Rubric 100 điểm:</strong>
+                <span>Đánh giá mức độ tuân thủ 4 bước (Mở đầu, Hình thành kiến thức, Luyện tập, Vận dụng) và chấm điểm sư phạm.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="config-actions">
+            <button id="btn-save-ai" class="btn btn-primary">Lưu Thiết Lập Beekone AI</button>
+            <span id="ai-status-msg" class="status-msg hidden">Đã lưu thiết lập AI!</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Diff Preview Modal -->
+    <div id="modal-diff" class="modal-overlay hidden">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <h3 class="modal-title">So Sánh Xem Trước (Before & After Preview)</h3>
+            <span id="modal-file-title" class="text-muted text-sm"></span>
+          </div>
+          <button id="btn-close-modal" class="btn-close">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="diff-grid">
+            <!-- Left: Before -->
+            <div class="diff-column diff-before">
+              <div class="diff-col-header">
+                <span class="badge badge-before">Văn Bản Gốc (Hiện tại)</span>
+              </div>
+              <div class="doc-sheet">
+                <div id="diff-before-content" class="doc-sheet-content">
+                  <!-- Dynamic content -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: After -->
+            <div class="diff-column diff-after">
+              <div class="diff-col-header">
+                <span class="badge badge-after">Văn Bản Chuẩn Mẫu THCS (Sau khi render)</span>
+              </div>
+              <div class="doc-sheet">
+                <div id="diff-after-content" class="doc-sheet-content">
+                  <!-- Dynamic content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btn-modal-cancel" class="btn btn-secondary">Đóng</button>
+          <button id="btn-modal-process-single" class="btn btn-primary">⚡ Render File Này Ngay</button>
+        </div>
+      </div>
+    </div>
+
+        <!-- AI Evaluation Modal -->
+    <div id="modal-ai-eval" class="modal-overlay hidden">
+      <div class="modal-container" style="max-width: 820px; width: 95%;">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
+              <span>🤖 Kết Quả Thẩm Định Sư Phạm AI (Rubric 100đ)</span>
+              <span id="ai-modal-grade" class="badge badge-accent">Hạng B</span>
+            </h3>
+            <span id="ai-modal-filename" class="text-muted text-sm"></span>
+          </div>
+          <button id="btn-close-ai-modal" class="btn-close">&times;</button>
+        </div>
+        <div class="modal-body" id="ai-modal-body" style="max-height: 72vh; overflow-y: auto;">
+          <div id="ai-modal-loading" class="text-center" style="padding: 40px;">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; font-weight: 600; color: #a5b4fc;">Đang phân tích cấu trúc giáo án & thẩm định theo Rubric 100 điểm với Beeknoee AI...</p>
+            <p class="text-muted text-sm" style="margin-top: 6px;">Tiêu chí: Mục tiêu (15đ) • Chuỗi hoạt động (35đ) • Hoạt động GV (15đ) • Hoạt động HS (15đ) • Thiết bị (10đ) • Đánh giá (10đ)</p>
+          </div>
+          <div id="ai-modal-content" class="hidden">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-copy-ai-report" class="btn btn-secondary">📋 Sao Chép Báo Cáo</button>
+          <button id="btn-close-ai-ok" class="btn btn-primary">Đóng</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="modal-help" class="modal-overlay hidden">
+      <div class="modal-container modal-sm">
+        <div class="modal-header">
+          <h3 class="modal-title">Hướng Dẫn Sử Dụng KHBD Pro</h3>
+          <button id="btn-close-help" class="btn-close">&times;</button>
+        </div>
+        <div class="modal-body help-content">
+          <h4>Quy trình sử dụng nhanh:</h4>
+          <ol>
+            <li><strong>Chọn thư mục chứa giáo án:</strong> Mặc định là thư mục hiện tại. Bấm <strong>"Quét Thư Mục"</strong>.</li>
+            <li><strong>Điều chỉnh thông số mẫu (Tab 2):</strong> Bạn có thể điều chỉnh Tên giáo viên, Trường, Năm học, Ngày dạy... và xem mô phỏng trực quan trang A4 cập nhật ngay lập tức.</li>
+            <li><strong>Xem trước (Diff):</strong> Bấm nút 👁️ ở từng giáo án để kiểm tra văn bản trước và sau khi chuẩn hoá.</li>
+            <li><strong>Bấm "BẮT ĐẦU RENDER HÀNG LOẠT":</strong> Toàn bộ giáo án sẽ được áp dụng chuẩn mẫu Mau KHBD THCS.docx và đổi tên chỉ với 1 click!</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-help-ok" class="btn btn-primary">Đã Hiểu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Edit File Modal -->
+    <div id="modal-edit-file" class="modal-overlay hidden">
+      <div class="modal-container modal-sm">
+        <div class="modal-header">
+          <h3 class="modal-title">Chỉnh Sửa Thông Số Giáo Án</h3>
+          <button id="btn-close-edit-modal" class="btn-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Tên file gốc</label>
+            <input type="text" id="edit-orig-filename" class="form-input" disabled style="opacity: 0.7;">
+          </div>
+          <div class="config-grid-2">
+            <div class="form-group">
+              <label class="form-label">Tuần dạy</label>
+              <input type="text" id="edit-week" class="form-input" placeholder="Ví dụ: 1">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tiết dạy</label>
+              <input type="text" id="edit-periods" class="form-input" placeholder="Ví dụ: 1, 2">
+            </div>
+          </div>
+          <div class="form-group">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 4px;">
+              <label class="form-label" style="margin-bottom:0;">Tên bài học</label>
+              <button id="btn-quick-ai-fix" type="button" class="btn btn-ai-mini" title="Dùng Beekone AI đọc nội dung giáo án để tự động nhận diện và sửa lại tên bài chuẩn">
+                <span>🤖 Beekone AI Tự Điền</span>
+              </button>
+            </div>
+            <input type="text" id="edit-lesson-name" class="form-input" placeholder="Ví dụ: BÀI 1. THẾ GIỚI KĨ THUẬT SỐ">
+            <div id="quick-ai-status" class="text-xs mt-1 hidden" style="font-style: italic; color: #8b5cf6;"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ngày dạy thực tế (áp dụng vào KHBD)</label>
+            <input type="text" id="edit-teaching-date" class="form-input" placeholder="Ví dụ: 07/09/2026 - 11/09/2026">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tên file mới xuất ra (.docx)</label>
+            <input type="text" id="edit-target-filename" class="form-input">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-cancel-edit" class="btn btn-secondary">Huỷ</button>
+          <button id="btn-save-edit" class="btn btn-primary">Cập Nhật Thông Số</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

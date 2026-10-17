@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local configuration with sensitive API keys
+config.json
+
+# Tool output directories
+KHBD_DaSua/*
+!KHBD_DaSua/.gitkeep
+
+# Backups & Temporary files
+PPCT_backup/
+*.tmp
+*.log
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

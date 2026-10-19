@@ -7,13 +7,25 @@ import docx
 
 DEFAULT_API_KEY = "sk-bee-73e9d744f8ef96f61278f28f4acfc8e44b69ee94c9cf6714720044f8c91c8502"
 DEFAULT_BASE_URL = "https://platform.beeknoee.com/api/v1"
-DEFAULT_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_MODEL = "gemini-3.1-flash-lite"
+
+DEPRECATED_MODELS_MAP = {
+    "gemini-2.5-flash-lite": "gemini-3.1-flash-lite",
+    "google/gemini-2.5-flash-lite": "gemini-3.1-flash-lite",
+    "gemini-2.5-flash": "gemini-3.5-flash",
+    "google/gemini-2.5-flash": "gemini-3.5-flash",
+    "gemini-2.5-pro": "gemini-3.5-flash",
+    "google/gemini-2.5-pro": "gemini-3.5-flash",
+    "google/gemini-3.1-flash-lite": "gemini-3.1-flash-lite",
+    "google/gemini-3.5-flash": "gemini-3.5-flash",
+}
 
 class BeeknoeeClient:
     def __init__(self, api_key: str = None, base_url: str = None, model: str = None):
         self.api_key = api_key or os.environ.get("BEE_API_KEY") or DEFAULT_API_KEY
         self.base_url = (base_url or os.environ.get("BEE_BASE_URL") or DEFAULT_BASE_URL).rstrip("/")
-        self.model = model or os.environ.get("AI_MODEL") or DEFAULT_MODEL
+        raw_model = model or os.environ.get("AI_MODEL") or DEFAULT_MODEL
+        self.model = DEPRECATED_MODELS_MAP.get(raw_model, raw_model)
 
     def chat(self, prompt: str, system_prompt: str = None, temperature: float = 0.2, max_tokens: int = 4096) -> str:
         messages = []
@@ -21,8 +33,9 @@ class BeeknoeeClient:
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": prompt})
 
+        model_to_use = DEPRECATED_MODELS_MAP.get(self.model, self.model)
         payload = {
-            "model": self.model,
+            "model": model_to_use,
             "messages": messages,
             "temperature": temperature,
             "max_tokens": max_tokens
@@ -38,6 +51,26 @@ class BeeknoeeClient:
         if resp.status_code == 200:
             data = resp.json()
             return data["choices"][0]["message"]["content"]
+        elif resp.status_code == 404:
+            # Tự động thử các model khả dụng khác trên Beeknoee nếu model hiện tại bị 404
+            for fb_model in ["gemini-3.1-flash-lite", "gemini-3.5-flash", "deepseek/deepseek-v4-flash"]:
+                if fb_model == model_to_use:
+                    continue
+                try:
+                    payload["model"] = fb_model
+                    fb_resp = requests.post(
+                        f"{self.base_url}/chat/completions",
+                        headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+                        json=payload,
+                        timeout=90
+                    )
+                    if fb_resp.status_code == 200:
+                        self.model = fb_model
+                        fb_data = fb_resp.json()
+                        return fb_data["choices"][0]["message"]["content"]
+                except Exception:
+                    pass
+            raise Exception(f"Beeknoee API Error: {resp.status_code} - {resp.text}")
         else:
             raise Exception(f"Beeknoee API Error: {resp.status_code} - {resp.text}")
 
@@ -143,9 +176,15 @@ Tra ve JSON:
         prompt = f"""Bạn là chuyên gia sư phạm thẩm định giáo án và đối chiếu Phân Phối Chương Trình (PPCT).
 Nhiệm vụ: Phân tích đoạn đầu của giáo án Word dưới đây và danh sách PPCT để xác định chính xác:
 1. Số thứ tự bài (bai_num): Số nguyên hoặc số kèm ký tự, ví dụ "1", "2", "3", "11". Nếu là bài ôn tập/kiểm tra thì ghi rõ "Ôn tập" hoặc "Kiểm tra".
-2. Tên bài chuẩn (bai_title): Tên bài học chuẩn theo Sách Giáo Khoa / PPCT (viết hoa chữ cái đầu hoặc đúng danh pháp SGK, TUYỆT ĐỐI KHÔNG chứa tiền tố "Bài 1.", "Bài 1:", "Tiết 1+2:", ...).
-3. Tên chủ đề (chude): Ví dụ "CHỦ ĐỀ 1: MÁY TÍNH VÀ CỘNG ĐỒNG".
-4. Tuần dạy (tuan): Chuỗi số tuần, ví dụ "1", "2".
+2. Tên bài chuẩn (bai_title): Tên bài học chuẩn theo Sách Giáo Khoa / PPCT (ví dụ "Sống có trách nhiệm", "Thế giới kĩ thuật số").
+TUYỆT ĐỐI KHÔNG chứa:
+- Tuần (ví dụ: TUẦN 9, Tuần 9-, Tuần 09)
+- Chủ đề (ví dụ: CĐ3, Chủ đề 3, CĐ 3-)
+- Bài (ví dụ: Bài 1., Bài 1:, BÀI 5)
+- Tiết (ví dụ: Tiết 1+2:, Tiết 18)
+Chỉ lấy đúng TÊN BÀI HỌC!
+3. Tên chủ đề (chude): Ví dụ "CHỦ ĐỀ 1: MÁY TÍNH VÀ CỘNG ĐỒNG", "CHỦ ĐỀ 3: ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HOÁ TRONG MÔI TRƯỜNG SỐ".
+4. Tuần dạy (tuan): Chuỗi số tuần, ví dụ "1", "2", "9".
 5. Tiết dạy (tiet): Chuỗi tiết, ví dụ "1, 2" hoặc "3" hoặc "4, 5".
 6. Mục khớp trong PPCT (matched_ppct): Chọn 1 item trong danh sách PPCT nếu có, hoặc null nếu không khớp.
 7. Giải thích ngắn gọn lý do nhận diện (explanation).
@@ -186,7 +225,34 @@ Tên file hiện tại: {filename}
             clean = re.sub(r"^```\s*", "", clean, flags=re.MULTILINE).strip()
             m = re.search(r"\{.*\}", clean, re.DOTALL)
             if m:
-                return json.loads(m.group(0))
+                res = json.loads(m.group(0))
+                # Post-processing: Triệt để bóc tách và làm sạch bai_title
+                if "bai_title" in res:
+                    raw_title = str(res.get("bai_title") or "").strip()
+                    # Cứu tuần nếu AI lỡ để trong tên bài mà chưa gán tuan
+                    if not res.get("tuan"):
+                        wm = re.search(r'(?:TUẦN|TUAN)\s*0*(\d+)', raw_title, re.IGNORECASE)
+                        if wm: res["tuan"] = wm.group(1)
+                    # Cứu chủ đề nếu AI lỡ để trong tên bài
+                    if not res.get("chude"):
+                        cm = re.search(r'(?:CĐ|CD|CHỦ\s*ĐỀ|CHU\s*DE)\s*([0-9A-Za-z]+)', raw_title, re.IGNORECASE)
+                        if cm: res["chude"] = f"CHỦ ĐỀ {cm.group(1).upper()}"
+                    
+                    # Bóc sạch tuần, chủ đề, bài, tiết ra khỏi bai_title
+                    cleaned_t = raw_title
+                    changed = True
+                    while changed:
+                        orig_t = cleaned_t
+                        cleaned_t = re.sub(r'^(?:TUẦN|TUAN)\s*\d+[\s\:\.\-–—]*', '', cleaned_t, flags=re.IGNORECASE).strip()
+                        cleaned_t = re.sub(r'^(?:CĐ|CD|CHỦ\s*ĐỀ|CHU\s*DE)\s*[0-9A-Za-z]+[\s\:\.\-–—]*', '', cleaned_t, flags=re.IGNORECASE).strip()
+                        cleaned_t = re.sub(r'^(?:BÀI|BAI)\s*\d+[a-zA-Z]?[\s\:\.\-–—]*', '', cleaned_t, flags=re.IGNORECASE).strip()
+                        cleaned_t = re.sub(r'^(?:TIẾT|TIET)\s*[\d\+\,\-\s]+[\s\:\.\-–—]*', '', cleaned_t, flags=re.IGNORECASE).strip()
+                        cleaned_t = re.sub(r'^[\:\.\-–—\s\+\,]+', '', cleaned_t).strip()
+                        changed = (cleaned_t != orig_t)
+                    cleaned_t = re.sub(r'[\:\.\-–—\s]+$', '', cleaned_t).strip()
+                    res["bai_title"] = cleaned_t
+
+                return res
         except Exception as e:
             print(f"Beekone AI analyze title error: {e}")
             return {

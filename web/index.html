@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/app.css">
+  <link rel="stylesheet" href="/static/app.css?v=2.5">
 </head>
 <body class="dark-theme">
   <div class="app-container">
@@ -67,75 +67,188 @@
 
     <!-- Main Workspace -->
     <main class="main-content">
-      <!-- Top Control Bar Card -->
-      <section class="card control-card">
-        <div class="control-grid">
-          <!-- Folder Path -->
-          <div class="form-group col-span-2">
-            <label class="form-label" for="input-folder-path">
-              <span>Thư mục chứa giáo án (KHBD)</span>
-              <span class="label-hint">Đường dẫn folder chứa các file .docx</span>
-            </label>
-            <div class="input-with-btn">
-              <input type="text" id="input-folder-path" class="form-input" placeholder="c:\Users\X1\Desktop\edit_KHBD">
-              <button id="btn-scan" class="btn btn-primary">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="23 4 23 10 17 10"></polyline>
-                  <polyline points="1 20 1 14 7 14"></polyline>
-                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-                </svg>
-                Quét Thư Mục
-              </button>
+      <!-- Unified Step-by-Step Dashboard Card -->
+      <section class="card control-card workflow-dashboard-card">
+        <div class="workflow-steps-grid">
+          
+          <!-- BƯỚC 1: KHỐI/MÔN & PPCT (SMAS) -->
+          <div class="workflow-step-col">
+            <div class="step-header">
+              <span class="step-badge">1</span>
+              <div>
+                <h3 class="step-title">PPCT & Khối Lớp</h3>
+                <p class="step-sub">Khớp bài, tuần, tiết & ngày dạy</p>
+              </div>
+            </div>
+
+            <div class="step-content">
+              <div class="form-group">
+                <label class="form-label" for="select-ppct-file">
+                  <span>Tệp Phân phối chương trình (PPCT)</span>
+                  <a href="javascript:void(0)" id="link-view-ppct-quick" class="link-action" title="Xem bảng PPCT này">📋 Xem bảng</a>
+                </label>
+                <select id="select-ppct-file" class="form-select font-semibold">
+                  <option value="_Lop_9.xlsx" selected>Tin học Lớp 9 (_Lop_9.xlsx)</option>
+                </select>
+                <div id="active-ppct-badge" style="margin-top: 8px; padding: 7px 12px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 8px; font-size: 12px; color: #047857; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+                  <span class="pulse-dot" style="background:#10b981;"></span>
+                  <span>Đang áp dụng:</span>
+                  <span id="active-ppct-badge-text">Tin học - Khối 9</span>
+                </div>
+              </div>
+
+              <div class="config-grid-2 mt-2">
+                <div class="form-group">
+                  <label class="form-label" for="select-main-subject">
+                    <span>Môn học</span>
+                  </label>
+                  <select id="select-main-subject" class="form-select text-xs">
+                    <option value="Tin học" selected>Tin học</option>
+                    <option value="Hoạt động trải nghiệm, hướng nghiệp">HĐTN, HN</option>
+                    <option value="Toán">Toán</option>
+                    <option value="Công nghệ">Công nghệ</option>
+                    <option value="Ngữ Văn">Ngữ Văn</option>
+                    <option value="Giáo dục thể chất">GD Thể chất</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="select-main-grade">
+                    <span>Khối lớp</span>
+                  </label>
+                  <select id="select-main-grade" class="form-select text-xs">
+                    <option value="6">Khối 6</option>
+                    <option value="7">Khối 7</option>
+                    <option value="8">Khối 8</option>
+                    <option value="9" selected>Khối 9</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Quick SMAS Direct Sync Button -->
+              <div class="smas-quick-bar mt-2">
+                <button type="button" id="btn-quick-sync-smas" class="btn btn-smas-quick" title="Đồng bộ trực tiếp TKB và PPCT từ hệ thống SMAS">
+                  <span class="pulse-dot"></span>
+                  <span>⚡ Đồng Bộ TKB SMAS</span>
+                </button>
+                <span id="smas-quick-status" class="smas-status-pill">TKB 19 tiết</span>
+              </div>
             </div>
           </div>
 
-          <!-- PPCT Selector -->
-          <div class="form-group">
-            <label class="form-label" for="select-ppct-file">
-              <span>Phân phối chương trình (PPCT)</span>
-              <span class="label-hint">Khớp bài, tuần, tiết</span>
-            </label>
-            <select id="select-ppct-file" class="form-select">
-              <option value="_Lop_9.xlsx" selected>Tin học Lớp 9 (_Lop_9.xlsx)</option>
-            </select>
+          <!-- BƯỚC 2: CẤU HÌNH ĐỔI TÊN TỆP THEO PPCT -->
+          <div class="workflow-step-col">
+            <div class="step-header">
+              <span class="step-badge">2</span>
+              <div>
+                <h3 class="step-title">Quy Tắc Đổi Tên Tệp PPCT</h3>
+                <p class="step-sub">Tự động đồng bộ và xem trước tức thì</p>
+              </div>
+            </div>
+
+            <div class="step-content">
+              <div class="form-group">
+                <label class="form-label" for="select-naming-scheme">
+                  <span>Mẫu định dạng tên file</span>
+                </label>
+                <select id="select-naming-scheme" class="form-select">
+                  <option value="vietnamese_standard" selected>⭐ Chuẩn Tiếng Việt: Tuần 01 - Tiết 01 - Bài 1 - Tên bài.docx</option>
+                  <option value="vietnamese_simple">📘 Môn & Lớp: Tin 9 - Tuần 01 - Tiết 01 - Tên bài.docx</option>
+                  <option value="period_lesson">⏱️ Tiết & Bài: Tiết 01 - Tên bài.docx</option>
+                  <option value="ppct_slug">🔤 Không dấu (Slug): tinhoc9_tuan01_Bai01_Ten-bai_Tiet01.docx</option>
+                  <option value="teacher">👨‍🏫 Kèm tên GV: Le Thi Phuong Thao_Tin 9_Tuan 01_Bai 01.docx</option>
+                  <option value="custom">⚙️ Tùy biến mẫu riêng (Tự nhập cú pháp)</option>
+                </select>
+              </div>
+
+              <div class="form-group mt-2 hidden" id="wrap-custom-pattern">
+                <label class="form-label" for="input-custom-pattern">
+                  <span>Cú pháp tên file tùy biến:</span>
+                  <span class="label-hint">Bấm thẻ biến để chèn nhanh</span>
+                </label>
+                <div class="input-with-tags">
+                  <input type="text" id="input-custom-pattern" class="form-input font-mono text-sm" value="Tuần {tuan} - Tiết {tiet} - Bài {bai_num} - {ten_bai}.docx" placeholder="Tuần {tuan} - Tiết {tiet} - Bài {bai_num} - {ten_bai}.docx">
+                </div>
+                
+                <!-- Quick Variable Chips -->
+                <div class="naming-chips-wrap">
+                  <button type="button" class="naming-chip" data-tag="{tuan}">+ Tuần</button>
+                  <button type="button" class="naming-chip" data-tag="{tiet}">+ Tiết</button>
+                  <button type="button" class="naming-chip" data-tag="{bai_num}">+ Số bài</button>
+                  <button type="button" class="naming-chip" data-tag="{ten_bai}">+ Tên bài chuẩn</button>
+                  <button type="button" class="naming-chip" data-tag="{mon}">+ Môn</button>
+                  <button type="button" class="naming-chip" data-tag="{lop}">+ Lớp</button>
+                  <button type="button" class="naming-chip" data-tag="{gv}">+ Tên GV</button>
+                  <button type="button" class="naming-chip" data-tag="{slug_name}">+ Không dấu</button>
+                </div>
+              </div>
+
+              <!-- Live Preview Sample Box -->
+              <div class="naming-preview-card mt-2">
+                <div class="preview-card-header">
+                  <span>👁️ Xem trước tên file mẫu:</span>
+                </div>
+                <div id="naming-preview-sample" class="preview-card-text">Tuần 01 - Tiết 01 - Bài 1 - Thế giới kĩ thuật số.docx</div>
+              </div>
+            </div>
           </div>
 
-          <!-- Naming Scheme -->
-          <div class="form-group">
-            <label class="form-label" for="select-naming-scheme">
-              <span>Quy tắc đổi tên file mới</span>
-              <span class="label-hint">Tự động sinh theo PPCT</span>
-            </label>
-            <select id="select-naming-scheme" class="form-select">
-              <option value="ppct_slug" selected>Theo PPCT: tinhoc9_tuan01_Bai01_The-Gioi...docx</option>
-              <option value="ppct_exact">Theo cột Ghi chú PPCT Excel</option>
-              <option value="teacher">Theo Mẫu GV: Le Thi Phuong Thao_Tin 9_Tuan 01...docx</option>
-              <option value="custom">Tuỳ biến cú pháp riêng</option>
-            </select>
+          <!-- BƯỚC 3: THƯ MỤC KHBD & KÝ DUYỆT CHUẨN HÓA -->
+          <div class="workflow-step-col">
+            <div class="step-header">
+              <span class="step-badge">3</span>
+              <div>
+                <h3 class="step-title">Thư Mục & Chuẩn Hóa</h3>
+                <p class="step-sub">Quét tệp & đồng bộ ký duyệt Thông tư</p>
+              </div>
+            </div>
+
+            <div class="step-content">
+              <div class="form-group">
+                <label class="form-label" for="input-folder-path">
+                  <span>Thư mục giáo án (KHBD)</span>
+                </label>
+                <div class="input-with-btn">
+                  <input type="text" id="input-folder-path" class="form-input text-xs" placeholder="c:\Users\Admin\Desktop\edit_KHBD">
+                  <button id="btn-scan" class="btn btn-primary" title="Quét toàn bộ giáo án trong thư mục">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="23 4 23 10 17 10"></polyline>
+                      <polyline points="1 20 1 14 7 14"></polyline>
+                      <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                    Quét
+                  </button>
+                </div>
+              </div>
+
+              <!-- Fast Toggles & Signers Sync -->
+              <div class="workflow-quick-toggles mt-2">
+                <label class="toggle-checkbox-label">
+                  <input type="checkbox" id="cfg-opt-format-5512-quick" checked>
+                  <span>📐 Thể thức CV 5512 (Bảng 1x2, lề chuẩn, footer)</span>
+                </label>
+                <label class="toggle-checkbox-label">
+                  <input type="checkbox" id="cfg-opt-smas-date-quick" checked>
+                  <span>📅 Khớp ngày dạy từ TKB SMAS</span>
+                </label>
+              </div>
+
+              <div class="config-grid-2 mt-2">
+                <div class="form-group">
+                  <label class="form-label" for="cfg-quick-signer-dept">Tổ trưởng CM ký</label>
+                  <input type="text" id="cfg-quick-signer-dept" class="form-input text-xs" value="Hoàng Thị Kim Tuyết" placeholder="Tên tổ trưởng">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cfg-quick-teacher">Giáo viên dạy</label>
+                  <input type="text" id="cfg-quick-teacher" class="form-input text-xs" value="Trần Đức Tình" placeholder="Tên giáo viên">
+                </div>
+              </div>
+
+              <div class="mt-2 text-right">
+                <a href="javascript:void(0)" id="link-more-config" class="link-action" style="font-size: 11.5px;">⚙️ Điều chỉnh chi tiết mẫu A4 & BGH ký duyệt &rarr;</a>
+              </div>
+            </div>
           </div>
 
-          <!-- Output Mode -->
-          <div class="form-group col-span-2">
-            <label class="form-label" for="select-output-mode">
-              <span>Chế độ lưu kết quả</span>
-              <span class="label-hint">Đảm bảo an toàn dữ liệu</span>
-            </label>
-            <select id="select-output-mode" class="form-select">
-              <option value="new_folder" selected>⭐ Xuất ra thư mục mới: KHBD_DaSua/ (Giữ nguyên file gốc)</option>
-              <option value="inplace">Sửa và đổi tên trực tiếp (Tự động sao lưu bản gốc vào _backup/)</option>
-            </select>
-          </div>
-
-          <!-- Template Preset -->
-          <div class="form-group col-span-2">
-            <label class="form-label" for="select-template-style">
-              <span>Mẫu Kế Hoạch Bài Dạy áp dụng</span>
-              <span class="label-hint">Định dạng bố cục</span>
-            </label>
-            <select id="select-template-style" class="form-select">
-              <option value="mau_thcs" selected>⭐ Mẫu Chuẩn THCS (Mau KHBD THCS.docx: Bảng 1x2 trên cùng, TÊN BÀI DẠY, Duyệt cuối bài)</option>
-            </select>
-          </div>
         </div>
       </section>
 
@@ -160,15 +273,54 @@
           </div>
         </div>
 
-        <div class="master-action-box">
-          <button id="btn-batch-process" class="btn btn-master">
+        <div class="master-action-box" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button id="btn-batch-process" class="btn btn-master" style="flex: 1.2; min-width: 290px;">
             <div class="btn-master-content">
               <span class="btn-master-icon">⚡</span>
               <div class="btn-master-text">
                 <span class="btn-master-title">BẮT ĐẦU RENDER & ĐỔI TÊN HÀNG LOẠT (1-CLICK)</span>
-                <span class="btn-master-sub">Áp dụng mẫu Mau KHBD THCS.docx: Bảng 1x2 đầu trang, Tên bài dạy, căn lề A4, header, footer & duyệt chuyên môn</span>
+                <span class="btn-master-sub">Chuẩn mẫu Mau KHBD THCS.docx: Bảng 1x2, Tên bài, căn lề A4, header, footer & duyệt</span>
               </div>
             </div>
+          </button>
+
+          <button id="btn-fast-rename" class="btn" style="flex: 1; min-width: 260px; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); color: #ffffff; border: none; padding: 12px 18px; border-radius: 12px; display: flex; align-items: center; gap: 12px; cursor: pointer; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);" title="Chỉ đổi tên file theo PPCT (Cực nhanh, 0.1s, giữ nguyên 100% nội dung gốc của Word)">
+            <span style="font-size: 26px;">🏷️</span>
+            <div style="display: flex; flex-direction: column; text-align: left;">
+              <span style="font-size: 14.5px; font-weight: 800; letter-spacing: 0.3px;">CHỈ ĐỔI TÊN TỆP NHANH (0.1S)</span>
+              <span style="font-size: 11px; opacity: 0.9;">Đổi tên theo đúng Tuần - Tiết - Bài PPCT • Không sửa ruột file</span>
+            </div>
+          </button>
+
+          <button id="btn-batch-nls-master" class="btn btn-nls-master" style="flex: 1; min-width: 280px;" title="Kiểm tra, đề xuất và tích hợp Năng lực số (NLS) theo Thông tư 02/2025/TT-BGDĐT">
+            <span style="font-size: 26px;">🎯</span>
+            <div style="display: flex; flex-direction: column; text-align: left;">
+              <span style="font-size: 14.5px; font-weight: 800; letter-spacing: 0.3px;">TỰ ĐỘNG TÍCH HỢP NĂNG LỰC SỐ (NLS)</span>
+              <span style="font-size: 11px; opacity: 0.9;">Chuẩn TT 02/2025 & CV 3456 • Tô chữ đỏ phần mới • Giữ nguyên file đã có NLS</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- NLS Control Options Bar -->
+        <div class="nls-controls-bar">
+          <label class="nls-checkbox-label">
+            <input type="checkbox" id="opt-sync-khgd" checked>
+            <span>🏫 Đồng bộ Mục tiêu (YCCĐ) từ Kế hoạch giáo dục trường</span>
+          </label>
+          <label class="nls-checkbox-label" title="Bật nếu muốn AI phân tích và chèn NLS ngay trong lúc render (sẽ tốn thêm 2-4 giây mỗi file)">
+            <input type="checkbox" id="opt-auto-nls">
+            <span>Tự động tích hợp NLS khi bấm Render (AI Beeknoee)</span>
+          </label>
+          <label class="nls-checkbox-label">
+            <input type="checkbox" id="opt-nls-red" checked>
+            <span>Đánh dấu chữ màu đỏ (Red) phần bổ sung</span>
+          </label>
+          <label class="nls-checkbox-label">
+            <input type="checkbox" id="opt-nls-only-audit">
+            <span>Chỉ kiểm tra (Audit NLS), không sửa file</span>
+          </label>
+          <button id="btn-open-nls-folder" class="btn btn-secondary" style="margin-left: auto; padding: 6px 14px; font-size: 12.5px;" title="Mở thư mục chứa các giáo án đã tích hợp NLS">
+            📂 Mở Thư Mục NLS
           </button>
         </div>
 
@@ -228,11 +380,24 @@
           </svg>
           Bảng Phân Phối Chương Trình
         </button>
+        <button class="tab-btn" data-tab="tab-khgd">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          KHGD Trường (Tin 6,7,8,9)
+        </button>
         <button class="tab-btn" data-tab="tab-ai">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
           </svg>
           Trợ Lý AI (Kế Hoạch Mở Rộng)
+        </button>
+              <button class="tab-btn" data-tab="tab-smas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          ⚡ SMAS & Thời Khóa Biểu
         </button>
       </nav>
 
@@ -250,7 +415,10 @@
               <span id="selected-summary-text" class="text-muted">Đang chọn: 0 file</span>
               <button id="btn-batch-ai-fix" class="btn btn-ai" title="Dùng Beekone AI đọc nội dung giáo án, nhận diện chính xác tên bài, số bài, tuần, tiết theo PPCT">
                 <span class="btn-ai-icon">🤖</span>
-                <span>Beekone AI Chuẩn Hoá Tên Bài</span>
+                <span>AI Sửa Tên Bài</span>
+              </button>
+              <button id="btn-toolbar-nls" class="btn btn-nls" title="Tích hợp Năng lực số (NLS) cho các file được chọn">
+                <span>🎯 Tích Hợp NLS</span>
               </button>
             </div>
             <div class="table-toolbar-right">
@@ -267,8 +435,9 @@
                   <th>Tuần & Tiết Dạy</th>
                   <th>Tên Bài Dạy (Khớp PPCT)</th>
                   <th>Tên File Mới Sau Khi Đổi</th>
+                  <th>Năng Lực Số (NLS)</th>
                   <th>Trạng Thái</th>
-                  <th width="150" class="text-right">Thao Tác</th>
+                  <th width="165" class="text-right">Thao Tác</th>
                 </tr>
               </thead>
               <tbody id="table-files-body">
@@ -335,8 +504,15 @@
                 <input type="text" id="cfg-classes" class="form-input" value="9">
               </div>
               <div class="form-group">
-                <label class="form-label" for="cfg-duration">Thời gian thực hiện (tiết)</label>
-                <input type="text" id="cfg-duration" class="form-input" value="2">
+                <label class="form-label">
+                  <span>Thời gian thực hiện (Số tiết)</span>
+                  <span class="label-hint">Tự động theo PPCT</span>
+                </label>
+                <div style="padding: 9px 12px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; font-size: 13px; color: #047857; font-weight: 600; display: flex; align-items: center; gap: 8px; min-height: 42px;">
+                  <span style="font-size: 16px;">⚡</span>
+                  <span>Tự động theo PPCT từng bài</span>
+                </div>
+                <input type="hidden" id="cfg-duration" value="1">
               </div>
             </div>
 
@@ -360,7 +536,8 @@
                   <span class="label-hint">Hiển thị trong giáo án</span>
                 </label>
                 <select id="cfg-date-format" class="form-select">
-                  <option value="d2_to_d6" selected>Thứ 2 - Thứ 6 (07/09/2026 - 11/09/2026)</option>
+                  <option value="smas_exact" selected>⚡ Chuẩn SMAS (Ngày học chính xác theo TKB & PPCT, VD: 08/09/2026)</option>
+                  <option value="d2_to_d6">Thứ 2 - Thứ 6 (07/09/2026 - 11/09/2026)</option>
                   <option value="tu_den">Từ 07/09 đến 11/09/2026</option>
                   <option value="d2_only">Chỉ ngày Thứ 2 (07/09/2026)</option>
                 </select>
@@ -397,9 +574,13 @@
 
             <div class="config-grid-2" style="margin-top: 14px;">
               <div class="form-group">
-                <label class="form-label" for="cfg-signer-school">
-                  <span>Duyệt của Chuyên môn (BGH)</span>
-                  <span class="label-hint">Kéo tên hoặc nhập tại đây</span>
+                <label class="form-label" for="cfg-title-signer-school">
+                  <span>Chức danh bên trái (Duyệt)</span>
+                </label>
+                <input type="text" id="cfg-title-signer-school" class="form-input" placeholder="VD: Duyệt của tổ chuyên môn" value="Duyệt của tổ chuyên môn">
+                <label class="form-label" for="cfg-signer-school" style="margin-top: 8px;">
+                  <span>Người ký duyệt</span>
+                  <span class="label-hint">Kéo tên hoặc nhập</span>
                 </label>
                 <div class="drop-zone-wrap" id="dropzone-school">
                   <input type="text" id="cfg-signer-school" class="form-input drop-target" placeholder="Kéo tên hoặc nhập..." value="Nguyễn Văn Cường">
@@ -408,12 +589,16 @@
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="cfg-signer-dept">
-                  <span>Duyệt của Tổ chuyên môn</span>
-                  <span class="label-hint">Kéo tên hoặc nhập tại đây</span>
+                <label class="form-label" for="cfg-title-signer-dept">
+                  <span>Chức danh bên phải (Thực hiện)</span>
+                </label>
+                <input type="text" id="cfg-title-signer-dept" class="form-input" placeholder="VD: Người thực hiện" value="Người thực hiện">
+                <label class="form-label" for="cfg-signer-dept" style="margin-top: 8px;">
+                  <span>Người thực hiện</span>
+                  <span class="label-hint">Kéo tên hoặc nhập</span>
                 </label>
                 <div class="drop-zone-wrap" id="dropzone-dept">
-                  <input type="text" id="cfg-signer-dept" class="form-input drop-target" placeholder="Kéo tên hoặc nhập..." value="Lê Thị Hương">
+                  <input type="text" id="cfg-signer-dept" class="form-input drop-target" placeholder="Kéo tên hoặc nhập..." value="Trần Đức Tình">
                   <div class="drop-hint">Thả tên vào đây ⬇</div>
                 </div>
               </div>
@@ -428,7 +613,14 @@
 
             <div class="divider"></div>
 
-            <h3 class="section-title">Tuỳ Chọn Hiển Thị Mẫu</h3>
+            <h3 class="section-title">Tuỳ Chọn Hiển Thị & Định Dạng Mẫu</h3>
+            <div class="checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="cfg-opt-format-5512" checked>
+                <span class="checkmark"></span>
+                <span style="font-weight: 600; color: #a5b4fc;">⭐ Format chuẩn Thông tư & CV 5512 (Font Times New Roman 13pt, dãn dòng 1.15, căn đều 2 bên, chuẩn hoá đề mục I, II, III & các bước)</span>
+              </label>
+            </div>
             <div class="checkbox-group">
               <label class="checkbox-container">
                 <input type="checkbox" id="cfg-opt-header" checked>
@@ -447,7 +639,7 @@
               <label class="checkbox-container">
                 <input type="checkbox" id="cfg-opt-approval" checked>
                 <span class="checkmark"></span>
-                <span>Thêm khối "Duyệt của Chuyên môn / Duyệt của tổ chuyên môn" ở cuối bài</span>
+                <span>Thêm khối ký duyệt cuối bài (Duyệt của tổ chuyên môn & Người thực hiện)</span>
               </label>
             </div>
             <div class="checkbox-group">
@@ -531,13 +723,13 @@
                 <!-- Approval Block at Bottom -->
                 <div class="sheet-approval" id="pv-approval">
                   <div class="approval-col">
-                    <div class="app-title">Duyệt của Chuyên môn</div>
+                    <div class="app-title" id="pv-title-signer-school">Duyệt của tổ chuyên môn</div>
                     <div class="app-note" id="pv-note-school">(Ký và ghi rõ họ tên)</div>
                     <div class="app-space"></div>
                     <div class="app-name" id="pv-signer-school">Nguyễn Văn Cường</div>
                   </div>
                   <div class="approval-col">
-                    <div class="app-title">Duyệt của tổ chuyên môn</div>
+                    <div class="app-title" id="pv-title-signer-dept">Người thực hiện</div>
                     <div class="app-note" id="pv-note-dept">(Ký và ghi rõ họ tên)</div>
                     <div class="app-space"></div>
                     <div class="app-name" id="pv-signer-dept">Lê Thị Hương</div>
@@ -563,7 +755,10 @@
             </div>
             <div class="table-toolbar-right" style="display:flex;gap:10px;align-items:center;">
               <input type="text" id="input-search-ppct" class="form-input search-input" placeholder="🔍 Lọc bài học, tuần, tiết...">
-              <button id="btn-sync-ppct-dates" class="btn btn-secondary" style="white-space:nowrap;padding:7px 14px;font-size:13px;" title="Tính toán lại và ghi ngày dạy trực tiếp vào các file Excel PPCT">
+              <button id="btn-sync-ppct-from-smas" class="btn btn-primary" style="white-space:nowrap;padding:7px 14px;font-size:13px;" title="Tự động kết nối SMAS bằng Token chung để tải mới toàn bộ PPCT 16 môn/lớp">
+                  ⚡ Tải & Đồng Bộ PPCT Từ SMAS
+                </button>
+                <button id="btn-sync-ppct-dates" class="btn btn-secondary" style="white-space:nowrap;padding:7px 14px;font-size:13px;" title="Tính toán lại và ghi ngày dạy trực tiếp vào các file Excel PPCT">
                 📅 Ghi Ngày Vào Excel PPCT
               </button>
             </div>
@@ -597,7 +792,7 @@
           <div class="ai-header">
             <div class="ai-badge">Trí Tuệ Nhân Tạo Beekone AI</div>
             <h2 class="card-title">Tích Hợp Beekone AI (Đồng Bộ Chuẩn Dự Án Flow GG)</h2>
-            <p class="card-desc">Sử dụng API Beekone Platform (chạy mô hình Gemini 2.5 Flash Lite) để phân tích tài liệu Word, tự động nhận diện chính xác Tên bài, Số bài, Chủ đề, đối chiếu PPCT và thẩm định sư phạm.</p>
+            <p class="card-desc">Sử dụng API Beekone Platform (chạy mô hình Google Gemini 3.1 Flash Lite) để phân tích tài liệu Word, tự động nhận diện chính xác Tên bài, Số bài, Chủ đề, đối chiếu PPCT và thẩm định sư phạm.</p>
           </div>
 
           <div class="config-grid">
@@ -623,9 +818,9 @@
             <div class="form-group">
               <label class="form-label" for="cfg-ai-model">Mô hình AI</label>
               <select id="cfg-ai-model" class="form-select">
-                <option value="gemini-2.5-flash-lite" selected>⚡ Gemini 2.5 Flash Lite (Siêu nhanh, tối ưu bóc tách kịch bản & giáo án)</option>
-                <option value="gemini-2.5-flash">Gemini 2.5 Flash (Tiêu chuẩn)</option>
-                <option value="gemini-2.5-pro">Gemini 2.5 Pro (Suy luận sâu, chi tiết)</option>
+                <option value="gemini-3.1-flash-lite" selected>⚡ Gemini 3.1 Flash Lite (Siêu nhanh, chuẩn xác Beeknoee)</option>
+                <option value="gemini-3.5-flash">Gemini 3.5 Flash (Tiêu chuẩn cân bằng cao)</option>
+                <option value="deepseek/deepseek-v4-flash">DeepSeek V4 Flash (Phân tích chuyên sâu)</option>
               </select>
             </div>
 
@@ -669,6 +864,343 @@
           </div>
         </div>
       </section>
+
+      <!-- TAB 5: Kế Hoạch Giáo Dục Trường (Tin 6, 7, 8, 9) -->
+      <section id="tab-khgd" class="tab-panel">
+        <div class="card table-card">
+          <div class="table-toolbar" style="flex-wrap: wrap; gap: 12px;">
+            <div class="table-toolbar-left" style="display:flex; align-items:center; gap: 10px;">
+              <span class="font-bold">🏫 Kế Hoạch Giáo Dục Môn Học (Tổ Chuyên Môn)</span>
+              <span id="khgd-source-badge" class="badge badge-accent">Đang tải...</span>
+            </div>
+            <div class="table-toolbar-right" style="display:flex; align-items:center; gap: 10px;">
+              <label for="select-khgd-grade" class="form-label" style="margin:0; font-size:13px;">Khối lớp:</label>
+              <select id="select-khgd-grade" class="form-select" style="width: auto; padding: 5px 12px; font-size: 13px;">
+                <option value="6">Tin học Lớp 6</option>
+                <option value="7">Tin học Lớp 7</option>
+                <option value="8">Tin học Lớp 8</option>
+                <option value="9" selected>Tin học Lớp 9</option>
+              </select>
+              
+              <input type="file" id="input-khgd-file" accept=".doc,.docx" style="display:none;">
+              <button id="btn-upload-khgd" class="btn btn-secondary" style="padding: 6px 14px; font-size: 13px;">
+                📤 Tải Lên KHGD Mới (.doc, .docx)
+              </button>
+              <button id="btn-parse-khgd" class="btn btn-primary" style="padding: 6px 14px; font-size: 13px;">
+                ⚡ Phân Tích Lại KHGD
+              </button>
+            </div>
+          </div>
+
+          <div style="padding: 12px 18px; background: rgba(30, 41, 59, 0.4); font-size: 13px; color: #94a3b8; border-bottom: 1px solid var(--border-color);">
+            💡 <strong>Tự động đồng bộ Mục tiêu:</strong> Khi kích hoạt, hệ thống sẽ đối chiếu tên bài của KHBD với Kế hoạch giáo dục của khối lớp, thay thế nội dung mục tiêu kiến thức cũ bằng <strong>Yêu cầu cần đạt chuẩn của trường</strong> và giữ nguyên 100% cấu trúc các phần hoạt động bên trong.
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="table-khgd">
+              <thead>
+                <tr>
+                  <th width="50">STT</th>
+                  <th width="70">Số Bài</th>
+                  <th width="240">Tên Bài Học Trong KHGD</th>
+                  <th width="80">Số Tiết</th>
+                  <th>Yêu Cầu Cần Đạt Chuẩn (Sẽ tự động đồng bộ vào KHBD)</th>
+                </tr>
+              </thead>
+              <tbody id="table-khgd-body">
+                <tr>
+                  <td colspan="5" class="text-center py-6 text-muted">Đang tải dữ liệu Kế hoạch giáo dục...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    
+        <!-- TAB 6: SMAS & THỜI KHÓA BIỂU -->
+        <section id="tab-smas" class="tab-panel">
+          <!-- Stat Bar -->
+          <div class="smas-stat-bar">
+            <div class="smas-stat-chip">
+              <div class="smas-stat-icon" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">📅</div>
+              <div>
+                <div class="smas-stat-val" id="smas-stat-total">19</div>
+                <div class="smas-stat-lbl">Tổng số tiết / tuần</div>
+              </div>
+            </div>
+            <div class="smas-stat-chip">
+              <div class="smas-stat-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">💻</div>
+              <div>
+                <div class="smas-stat-val" id="smas-stat-tin">13</div>
+                <div class="smas-stat-lbl">Môn Tin học (Khối 3-9)</div>
+              </div>
+            </div>
+            <div class="smas-stat-chip">
+              <div class="smas-stat-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">⚽</div>
+              <div>
+                <div class="smas-stat-val" id="smas-stat-gdtc">4</div>
+                <div class="smas-stat-lbl">GD thể chất (6A, 6B)</div>
+              </div>
+            </div>
+            <div class="smas-stat-chip">
+              <div class="smas-stat-icon" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">🎯</div>
+              <div>
+                <div class="smas-stat-val" id="smas-stat-hdtn">2</div>
+                <div class="smas-stat-lbl">HĐTN, HN (Lớp 8)</div>
+              </div>
+            </div>
+            <div class="smas-stat-chip" style="margin-left: auto;">
+              <div class="smas-stat-icon" style="background: rgba(99, 102, 241, 0.15); color: #6366f1;">👨‍🏫</div>
+              <div>
+                <div class="smas-stat-val" id="smas-stat-teacher" style="font-size: 1rem;">Trần Đức Tình</div>
+                <div class="smas-stat-lbl" id="smas-stat-school">TH&THCS Đăk Trôi (2026-2027)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Token & Profile Card -->
+          <div class="card mb-3">
+            <div class="card-header flex-between">
+              <div>
+                <div class="card-title">🔑 Quản Lý Bearer Token SMAS & Hồ Sơ Giáo Viên</div>
+                <div class="card-subtitle">Dán Bearer Token từ F12 Network để tự động đồng bộ hồ sơ giáo viên, năm học và kết nối SMAS</div>
+              </div>
+              <div id="smas-token-badge" class="badge badge-warning">Đang kiểm tra...</div>
+            </div>
+            <div class="card-body">
+              <div class="form-group mb-2">
+                <label class="form-label font-bold">Bearer Token SMAS (Copy từ Header 'authorization' trong F12 Network):</label>
+                <textarea id="smas-input-token" class="form-control font-mono text-sm" rows="2" placeholder="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."></textarea>
+              </div>
+              <div class="flex-gap align-center">
+                <button type="button" class="btn btn-primary" id="btn-smas-check-token">
+                  ⚡ Kiểm Tra & Đồng Bộ Hồ Sơ Giáo Viên
+                </button>
+                <button type="button" class="btn btn-secondary" id="btn-smas-load-ppct">
+                  📥 Tải PPCT Thật Từ SMAS
+                </button>
+                <span id="smas-token-msg" class="text-sm font-semibold" style="margin-left: 10px;"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TKB Sub-Navigation -->
+          <div class="tabs-subnav mb-3">
+            <button class="subtab-btn active" data-subtab="subtab-schedule">📅 Thời Khóa Biểu Tuần (19 Tiết)</button>
+            <button class="subtab-btn" data-subtab="subtab-sync-smas">🚀 Đồng Bộ Lịch Báo Giảng Lên SMAS</button>
+            <button class="subtab-btn" data-subtab="subtab-ppct-db">📋 Phân Phối Chương Trình SMAS (16 Lớp/Môn)</button>
+          </div>
+
+          <!-- SUBTAB 1: THỜI KHÓA BIỂU -->
+          <div id="subtab-schedule" class="subtab-panel active">
+            <div class="card">
+              <div class="card-header flex-between" style="flex-wrap: wrap; gap: 10px;">
+                <div>
+                  <div class="card-title">Thời Khóa Biểu Tuần - Thầy Trần Đức Tình</div>
+                  <div class="card-subtitle">Lưới thời khóa biểu chuẩn hóa 19 tiết (được đồng bộ chuẩn từ file Excel TKB trường)</div>
+                </div>
+                <div class="flex-gap" style="align-items: center; flex-wrap: wrap;">
+                  <input type="file" id="input-smas-tkb-excel" accept=".xls,.xlsx" style="display:none;">
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-smas-sample-tkb" title="Đồng bộ ngay từ file thơi khóa biểu 1.xls có sẵn">
+                    📄 Nạp Mẫu "thơi khóa biểu 1.xls"
+                  </button>
+                  <button type="button" class="btn btn-primary btn-sm" id="btn-smas-import-excel" style="background: linear-gradient(135deg, #059669, #10b981); border:none;" title="Tải file Excel TKB mới (.xls, .xlsx) để tự động trích xuất tiết dạy của giáo viên">
+                    📥 Nhập TKB Từ File Excel
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-smas-reset-tkb">🔄 Khôi Phục TKB Gốc</button>
+                  <button type="button" class="btn btn-primary btn-sm" id="btn-smas-save-tkb">💾 Lưu Thời Khóa Biểu</button>
+                </div>
+              </div>
+              <div class="card-body" style="overflow-x: auto;">
+                <table class="smas-tkb-table" id="smas-tkb-grid">
+                  <thead>
+                    <tr>
+                      <th style="width: 70px;">Buổi</th>
+                      <th style="width: 50px;">Tiết</th>
+                      <th>Thứ Hai</th>
+                      <th>Thứ Ba</th>
+                      <th>Thứ Tư</th>
+                      <th>Thứ Năm</th>
+                      <th>Thứ Sáu</th>
+                      <th>Thứ Bảy</th>
+                    </tr>
+                  </thead>
+                  <tbody id="smas-tkb-tbody">
+                    <!-- Populated dynamically via JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB 2: ĐỒNG BỘ LỊCH BÁO GIẢNG -->
+          <div id="subtab-sync-smas" class="subtab-panel">
+            <!-- 1. Upgraded Intuitive Sổ Báo Giảng Preview Card (ĐẶT LÊN ĐẦU TIÊN TRỰC QUAN) -->
+            <div class="card mb-3" id="smas-preview-card">
+              <div class="card-header flex-between" style="flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <div>
+                  <div class="card-title" style="display: flex; align-items: center; gap: 8px;">
+                    <span>📖 Sổ Báo Giảng Trực Quan</span>
+                    <span class="badge badge-accent" id="smas-preview-weeks-count-badge">Tuần 1</span>
+                  </div>
+                  <div class="card-subtitle">Xem trước trực quan ngày dạy, tiết PPCT, tên bài học và đồ dùng dạy học theo từng ngày</div>
+                </div>
+
+                <!-- Week Navigator & Action Toolbar -->
+                <div class="flex-gap align-center" style="flex-wrap: wrap;">
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-smas-prev-week" title="Xem tuần trước">◀ Trước</button>
+                  <select id="smas-preview-week-select" class="form-control form-control-sm" style="min-width: 200px; font-weight: 600;">
+                    <option value="">-- Đang nạp danh sách tuần... --</option>
+                  </select>
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-smas-next-week" title="Xem tuần tiếp theo">Sau ▶</button>
+
+                  <!-- View Mode Switcher -->
+                  <div class="btn-group" style="display: flex; gap: 2px; background: rgba(255,255,255,0.06); padding: 3px; border-radius: 8px;">
+                    <button type="button" class="btn btn-sm smas-view-btn active" data-view="cards" title="Xem dạng thẻ theo từng ngày trong tuần">📅 Thẻ Ngày</button>
+                    <button type="button" class="btn btn-sm smas-view-btn" data-view="sheet" title="Xem dạng sổ báo giảng chuẩn mẫu A4">📋 Mẫu Sổ</button>
+                    <button type="button" class="btn btn-sm smas-view-btn" data-view="table" title="Xem dạng bảng dữ liệu đầy đủ">📊 Bảng</button>
+                  </div>
+
+                  <button type="button" class="btn btn-secondary btn-sm" id="btn-smas-print-lbg" title="In hoặc xuất Sổ báo giảng tuần này">🖨️ In Sổ</button>
+                  <button type="button" class="btn btn-success btn-sm font-bold" id="btn-smas-execute-sync" title="Đồng bộ lịch báo giảng của tất cả các tuần lên SMAS">🚀 Đồng Bộ Lên SMAS</button>
+                </div>
+              </div>
+
+              <!-- Week Summary Info Bar -->
+              <div id="smas-week-summary-bar" style="background: rgba(59, 130, 246, 0.08); border-bottom: 1px solid rgba(59, 130, 246, 0.15); padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px;">
+                <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                  <span id="smas-sum-date-range" class="font-bold text-primary">📅 Tuần 1: 07/09/2026 ➔ 13/09/2026</span>
+                  <span class="badge badge-primary" id="smas-sum-total-slots">Tổng 19 tiết</span>
+                  <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981;" id="smas-sum-tin-slots">Tin học: 13 tiết</span>
+                  <span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b;" id="smas-sum-gdtc-slots">GDTC: 4 tiết</span>
+                  <span class="badge" style="background: rgba(168, 85, 247, 0.2); color: #a855f7;" id="smas-sum-hdtn-slots">HĐTN: 2 tiết</span>
+                </div>
+                <div class="text-xs text-muted" id="smas-sum-teacher-school">
+                  Giáo viên: <b>Trần Đức Tình</b> | Trường: <b>TH&THCS Đăk Trôi</b>
+                </div>
+              </div>
+
+              <!-- Dedicated Scrollable Container for Preview -->
+              <div class="card-body" style="padding: 16px; max-height: 560px; overflow-y: auto; scroll-behavior: smooth;">
+                <!-- VIEW 1: CARDS THEO TỪNG NGÀY (Mặc định trực quan nhất) -->
+                <div id="smas-view-cards" class="smas-preview-view active">
+                  <div id="smas-cards-container" class="smas-days-grid">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                </div>
+
+                <!-- VIEW 2: MẪU SỔ BÁO GIẢNG CHUẨN IN A4 -->
+                <div id="smas-view-sheet" class="smas-preview-view hidden">
+                  <div class="smas-sheet-container" id="smas-sheet-printable">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+                </div>
+
+                <!-- VIEW 3: BẢNG DỮ LIỆU ĐẦY ĐỦ -->
+                <div id="smas-view-table" class="smas-preview-view hidden" style="overflow-x: auto;">
+                  <table class="smas-preview-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 80px;">Thứ</th>
+                        <th style="width: 100px;">Ngày Dạy</th>
+                        <th style="width: 70px;">Buổi</th>
+                        <th style="width: 50px;">Tiết</th>
+                        <th style="width: 70px;">Lớp</th>
+                        <th style="width: 140px;">Môn Học</th>
+                        <th style="width: 80px;">Tiết PPCT</th>
+                        <th>Tên Bài Dạy Chuẩn (SMAS)</th>
+                        <th style="width: 150px;">Đồ Dùng / Thiết Bị</th>
+                        <th style="width: 80px;">Cấp</th>
+                      </tr>
+                    </thead>
+                    <tbody id="smas-preview-tbody">
+                      <tr><td colspan="10" class="text-center text-muted py-4">Đang tải lịch báo giảng trực quan...</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Hộp Cấu Hình Sinh & Đồng Bộ Hàng Loạt -->
+            <div class="card mb-3">
+              <div class="card-header">
+                <div class="card-title">⚙️ Cấu Hình Phạm Vi Tuần & Tùy Chọn Đồng Bộ</div>
+                <div class="card-subtitle">Tùy chỉnh khoảng tuần sinh dữ liệu và tiến trình gửi trực tiếp lên SMAS</div>
+              </div>
+              <div class="card-body">
+                <div class="smas-control-grid mb-3">
+                  <div class="form-group">
+                    <label class="form-label">Từ Tuần:</label>
+                    <input type="number" id="smas-sync-start-week" class="form-control" value="1" min="1" max="40">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Đến Tuần:</label>
+                    <input type="number" id="smas-sync-end-week" class="form-control" value="35" min="1" max="40">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Cấp Học:</label>
+                    <select id="smas-sync-level" class="form-control">
+                      <option value="all">Cả hai cấp (Tiểu học 02 & THCS 03)</option>
+                      <option value="02">Chỉ cấp Tiểu học (Khối 3, 4, 5)</option>
+                      <option value="03">Chỉ cấp THCS (Khối 6, 7, 8, 9)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Ngày Bắt Đầu Tuần 1:</label>
+                    <input type="date" id="smas-sync-start-date" class="form-control" value="2026-09-07">
+                  </div>
+                </div>
+
+                <div class="flex-gap mb-3">
+                  <button type="button" class="btn btn-secondary" id="btn-smas-preview-payloads">
+                    🔄 Tạo Lại Lịch Theo Phạm Vi Trên
+                  </button>
+                  <span id="smas-sync-status-msg" class="text-sm font-semibold align-self-center"></span>
+                </div>
+
+                <!-- Sync Realtime Progress Log -->
+                <div id="smas-sync-log-card" class="smas-log-box hidden">
+                  <div class="font-bold mb-1" style="color: #60a5fa;">Tiến trình đồng bộ SMAS:</div>
+                  <div id="smas-sync-log-content" class="font-mono text-xs" style="max-height: 200px; overflow-y: auto;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB 3: PPCT SMAS DATABASE -->
+          <div id="subtab-ppct-db" class="subtab-panel">
+            <div class="card">
+              <div class="card-header flex-between">
+                <div>
+                  <div class="card-title">Cơ Sở Dữ Liệu PPCT Thật Từ SMAS (16 Môn/Lớp)</div>
+                  <div class="card-subtitle">Toàn bộ GUID distributeProgramId và tên bài chuẩn từ hệ thống SMAS của thầy Trần Đức Tình</div>
+                </div>
+                <div class="flex-gap align-center">
+                  <select id="smas-select-ppct-class" class="form-control form-control-sm" style="width: 260px;">
+                    <!-- Populated dynamically -->
+                  </select>
+                  <button type="button" class="btn btn-primary btn-sm" id="btn-smas-reload-ppct-view">🔄 Tải Lại</button>
+                </div>
+              </div>
+              <div class="card-body" style="overflow-x: auto; max-height: 520px;">
+                <table class="smas-preview-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 70px;">Tiết PPCT</th>
+                      <th style="width: 90px;">Tuần PPCT</th>
+                      <th>Tên Bài Học</th>
+                      <th style="width: 320px;">distributeProgramId (GUID)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="smas-ppct-tbody">
+                    <!-- Populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
     </main>
 
     <!-- Diff Preview Modal -->
@@ -781,6 +1313,18 @@
             <label class="form-label">Tên file gốc</label>
             <input type="text" id="edit-orig-filename" class="form-input" disabled style="opacity: 0.7;">
           </div>
+
+          <!-- Quick PPCT Dropdown Selector -->
+          <div class="form-group" style="background: rgba(99, 102, 241, 0.08); padding: 10px; border-radius: 8px; border: 1px dashed var(--primary);">
+            <label class="form-label" style="color: var(--primary); font-weight: 700;">
+              <span>⚡ Chọn bài từ PPCT để tự điền 100%</span>
+              <span class="label-hint">Tuần, Tiết, Tên, Ngày dạy</span>
+            </label>
+            <select id="edit-ppct-select" class="form-select" style="border-color: var(--primary);">
+              <option value="">-- Chọn bài học từ PPCT đang mở --</option>
+            </select>
+          </div>
+
           <div class="config-grid-2">
             <div class="form-group">
               <label class="form-label">Tuần dạy</label>
@@ -812,12 +1356,41 @@
         </div>
         <div class="modal-footer">
           <button id="btn-cancel-edit" class="btn btn-secondary">Huỷ</button>
-          <button id="btn-save-edit" class="btn btn-primary">Cập Nhật Thông Số</button>
+          <button id="btn-save-edit" class="btn btn-primary">Lưu Thay Đổi</button>
+        </div>
+      </div>
+    </div>
+    <!-- NLS Detail Modal -->
+    <div id="modal-nls-detail" class="modal-overlay hidden">
+      <div class="modal-container" style="max-width: 850px; width: 95%;">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
+              <span>🎯 Chi Tiết Tích Hợp Năng Lực Số (Thông tư 02/2025/TT-BGDĐT)</span>
+              <span id="nls-modal-badge" class="badge badge-accent">Chưa tích hợp</span>
+            </h3>
+            <span id="nls-modal-filename" class="text-muted text-sm"></span>
+          </div>
+          <button id="btn-close-nls-modal" class="btn-close">&times;</button>
+        </div>
+        <div class="modal-body" id="nls-modal-body" style="max-height: 72vh; overflow-y: auto; padding: 20px;">
+          <div id="nls-modal-loading" class="text-center hidden" style="padding: 30px;">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; font-weight: 600; color: #a5b4fc;">Đang phân tích và thẩm định Năng lực số với PicOne AI...</p>
+          </div>
+          <div id="nls-modal-content">
+            <!-- Dynamic Content -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-close-nls-ok" class="btn btn-secondary">Đóng</button>
+          <button id="btn-nls-apply-single" class="btn btn-primary">⚡ Tích Hợp Vào File Này Ngay</button>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="/static/app.js"></script>
+  <script src="/static/app.js?v=3.0_realtime_progress"></script>
+  <script src="/static/smas.js?v=3.0"></script>
 </body>
 </html>

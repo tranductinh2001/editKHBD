@@ -1,11 +1,11 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
-title KHBD Pro - Trình Chuẩn Hoá Giáo Án Hàng Loạt
+title KHBD & SMAS Pro - Hệ Thống Soạn KHBD & Đồng Bộ SMAS
 cls
 
 echo ================================================================
-echo    KHBD Pro - Trình Chuẩn Hoá & Đổi Tên Kế Hoạch Bài Dạy
-echo    Trường TH & THCS Đăk Trôi - Giáo Viên: Lê Thị Phương Thảo
+echo    KHBD Pro - Soạn KHBD & Đồng Bộ Lịch Báo Giảng SMAS
+echo    Trường TH & THCS Đăk Trôi - Giáo Viên: Trần Đức Tình
 echo ================================================================
 echo.
 echo [*] Đang khởi động máy chủ cục bộ trên cổng 8765...

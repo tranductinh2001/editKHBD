@@ -1,0 +1,1359 @@
+{
+  "source_file": "KH tổ CM TIN HỌC 6,7,8,9 (26-27).doc",
+  "source_docx": "KH tổ CM TIN HỌC 6,7,8,9 (26-27).docx",
+  "grades": {
+    "6": {
+      "grade": "6",
+      "total_lessons": 24,
+      "lessons": [
+        {
+          "stt": "1",
+          "bai_num": "1",
+          "ten_bai": "Bài 1. Thông tin và dữ liệu",
+          "bai_title": "Thông tin và dữ liệu",
+          "so_tiet": "1,2",
+          "chu_de": "Chủ đề 1. Máy tính và cộng đồng",
+          "yccd_raw": "- Nhận biết được sự khác nhau giữa thông tin và DL\n- Phân biệt được TT và vật mang tin\n- Nêu được VD minh họa về mối quan hệ giữa TT và DL; tầm quan trọng của TT",
+          "yccd_bullets": [
+            "- Nhận biết được sự khác nhau giữa thông tin và DL",
+            "- Phân biệt được TT và vật mang tin",
+            "- Nêu được VD minh họa về mối quan hệ giữa TT và DL; tầm quan trọng của TT"
+          ],
+          "yccd_text": "- Nhận biết được sự khác nhau giữa thông tin và DL\n- Phân biệt được TT và vật mang tin\n- Nêu được VD minh họa về mối quan hệ giữa TT và DL; tầm quan trọng của TT"
+        },
+        {
+          "stt": "2",
+          "bai_num": "2",
+          "ten_bai": "Bài 2. Xử lí thông tin",
+          "bai_title": "Xử lí thông tin",
+          "so_tiet": "3,4",
+          "chu_de": "Chủ đề 1. Máy tính và cộng đồng",
+          "yccd_raw": "- Nêu được các HĐ cơ bản trong xử lí thông tin\n- Giải thích được MT là công cụ để xử lý TT; nêu được VD minh họa",
+          "yccd_bullets": [
+            "- Nêu được các HĐ cơ bản trong xử lí thông tin",
+            "- Giải thích được MT là công cụ để xử lý TT; nêu được VD minh họa"
+          ],
+          "yccd_text": "- Nêu được các HĐ cơ bản trong xử lí thông tin\n- Giải thích được MT là công cụ để xử lý TT; nêu được VD minh họa"
+        },
+        {
+          "stt": "3",
+          "bai_num": "3",
+          "ten_bai": "Bài 3. Thông tin trong máy tính",
+          "bai_title": "Thông tin trong máy tính",
+          "so_tiet": "5",
+          "chu_de": "Chủ đề 1. Máy tính và cộng đồng",
+          "yccd_raw": "- Giải thích được có thể biểu diễn thông tin chỉ với hai kí hiệu 0 và 1\n- Biết được bit là đơn vị nhỏ nhất trong lưu trữ thông tin\n- Ước lượng được khả năng lưu trữ của các thiết bị nhớ thông dụng như đĩa quang, đĩa từ, thẻ nhớ",
+          "yccd_bullets": [
+            "- Giải thích được có thể biểu diễn thông tin chỉ với hai kí hiệu 0 và 1",
+            "- Biết được bit là đơn vị nhỏ nhất trong lưu trữ thông tin",
+            "- Ước lượng được khả năng lưu trữ của các thiết bị nhớ thông dụng như đĩa quang, đĩa từ, thẻ nhớ"
+          ],
+          "yccd_text": "- Giải thích được có thể biểu diễn thông tin chỉ với hai kí hiệu 0 và 1\n- Biết được bit là đơn vị nhỏ nhất trong lưu trữ thông tin\n- Ước lượng được khả năng lưu trữ của các thiết bị nhớ thông dụng như đĩa quang, đĩa từ, thẻ nhớ"
+        },
+        {
+          "stt": "4",
+          "bai_num": "4",
+          "ten_bai": "Bài 4. Mạng máy tính",
+          "bai_title": "Mạng máy tính",
+          "so_tiet": "6",
+          "chu_de": "Chủ đề 2. Mạng máy tính và Internet",
+          "yccd_raw": "- Nêu được khái niệm và lợi ích của mạng máy tính\n- Kể tên được những thành phần chính của một mạng máy tính\n- Nêu được ví dụ cụ thể về trường hợp mạng không dây tiện dụng hơn mạng có dây",
+          "yccd_bullets": [
+            "- Nêu được khái niệm và lợi ích của mạng máy tính",
+            "- Kể tên được những thành phần chính của một mạng máy tính",
+            "- Nêu được ví dụ cụ thể về trường hợp mạng không dây tiện dụng hơn mạng có dây"
+          ],
+          "yccd_text": "- Nêu được khái niệm và lợi ích của mạng máy tính\n- Kể tên được những thành phần chính của một mạng máy tính\n- Nêu được ví dụ cụ thể về trường hợp mạng không dây tiện dụng hơn mạng có dây"
+        },
+        {
+          "stt": "5",
+          "bai_num": "5",
+          "ten_bai": "Ôn tập giữa học kì",
+          "bai_title": "Ôn tập giữa học kì",
+          "so_tiet": "7",
+          "chu_de": "Chủ đề 2. Mạng máy tính và Internet",
+          "yccd_raw": "Củng cố các kiến thức đã học",
+          "yccd_bullets": [
+            "- Củng cố các kiến thức đã học"
+          ],
+          "yccd_text": "- Củng cố các kiến thức đã học"
+        },
+        {
+          "stt": "6",
+          "bai_num": "6",
+          "ten_bai": "Kiểm tra giữa kỳ I",
+          "bai_title": "Kiểm tra giữa kỳ I",
+          "so_tiet": "8",
+          "chu_de": "Chủ đề 2. Mạng máy tính và Internet",
+          "yccd_raw": "Đáp ứng YCCĐ của các chủ đề đã học",
+          "yccd_bullets": [
+            "- Đáp ứng YCCĐ của các chủ đề đã học"
+          ],
+          "yccd_text": "- Đáp ứng YCCĐ của các chủ đề đã học"
+        },
+        {
+          "stt": "7",
+          "bai_num": "5",
+          "ten_bai": "Bài 5. Internet",
+          "bai_title": "Internet",
+          "so_tiet": "9,10",
+          "chu_de": "Chủ đề 2. Mạng máy tính và Internet",
+          "yccd_raw": "- Biết Internet là gì\n- Nêu được một số đặc điểm chính của Internet\n- Nêu được một số lợi ích chính của Internet",
+          "yccd_bullets": [
+            "- Biết Internet là gì",
+            "- Nêu được một số đặc điểm chính của Internet",
+            "- Nêu được một số lợi ích chính của Internet"
+          ],
+          "yccd_text": "- Biết Internet là gì\n- Nêu được một số đặc điểm chính của Internet\n- Nêu được một số lợi ích chính của Internet"
+        },
+        {
+          "stt": "8",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Mạng thông tin toàn cầu",
+          "bai_title": "Mạng thông tin toàn cầu",
+          "so_tiet": "11,12",
+          "chu_de": "Chủ đề 3. Tổ chức lưu trữ, tìm kiếm và trao đổ thông tin",
+          "yccd_raw": "- Trình bày được sơ lược về các khái niệm WWW, website, địa chỉ của website, trình duyệt\n- Xem và nêu được những thông tin chính trên trang web cho trước\n- Khai thác được thông tin trên một số trang web thông dụng như tra từ điển, xem thời tiết, tin thời sự,...",
+          "yccd_bullets": [
+            "- Trình bày được sơ lược về các khái niệm WWW, website, địa chỉ của website, trình duyệt",
+            "- Xem và nêu được những thông tin chính trên trang web cho trước",
+            "- Khai thác được thông tin trên một số trang web thông dụng như tra từ điển, xem thời tiết, tin thời sự,..."
+          ],
+          "yccd_text": "- Trình bày được sơ lược về các khái niệm WWW, website, địa chỉ của website, trình duyệt\n- Xem và nêu được những thông tin chính trên trang web cho trước\n- Khai thác được thông tin trên một số trang web thông dụng như tra từ điển, xem thời tiết, tin thời sự,..."
+        },
+        {
+          "stt": "9",
+          "bai_num": "7",
+          "ten_bai": "Bài 7. Tìm kiếm thông tin trên Internet",
+          "bai_title": "Tìm kiếm thông tin trên Internet",
+          "so_tiet": "13,14",
+          "chu_de": "Chủ đề 3. Tổ chức lưu trữ, tìm kiếm và trao đổ thông tin",
+          "yccd_raw": "- Nêu được công dụng của máy tìm kiếm\n- Xác định được từ khoá ứng với một mục đích tìm kiếm cho trước\n- Thực hiện được việc tìm kiếm và khai tác thông tin trên Internet",
+          "yccd_bullets": [
+            "- Nêu được công dụng của máy tìm kiếm",
+            "- Xác định được từ khoá ứng với một mục đích tìm kiếm cho trước",
+            "- Thực hiện được việc tìm kiếm và khai tác thông tin trên Internet"
+          ],
+          "yccd_text": "- Nêu được công dụng của máy tìm kiếm\n- Xác định được từ khoá ứng với một mục đích tìm kiếm cho trước\n- Thực hiện được việc tìm kiếm và khai tác thông tin trên Internet"
+        },
+        {
+          "stt": "10",
+          "bai_num": "8",
+          "ten_bai": "Bài 8. Thư điện tử",
+          "bai_title": "Thư điện tử",
+          "so_tiet": "15,16",
+          "chu_de": "Chủ đề 3. Tổ chức lưu trữ, tìm kiếm và trao đổ thông tin",
+          "yccd_raw": "- Biết thư điện tử là gì; biết ưu điểm nhược điểm cơ bản của dịch vụ thư điện tử so với các phương tiện khác\n- Biết tài khoản của thư điện tử; hộp thư điện tử; thành phần của địa chỉ thư điện tử \n- Biết cách đăng ký tài khoản thư điện tử và thực hiện được việc đăng nhập, soạn, gửi đăng xuất hộp thư điện tử",
+          "yccd_bullets": [
+            "- Biết thư điện tử là gì; biết ưu điểm nhược điểm cơ bản của dịch vụ thư điện tử so với các phương tiện khác",
+            "- Biết tài khoản của thư điện tử; hộp thư điện tử; thành phần của địa chỉ thư điện tử",
+            "- Biết cách đăng ký tài khoản thư điện tử và thực hiện được việc đăng nhập, soạn, gửi đăng xuất hộp thư điện tử"
+          ],
+          "yccd_text": "- Biết thư điện tử là gì; biết ưu điểm nhược điểm cơ bản của dịch vụ thư điện tử so với các phương tiện khác\n- Biết tài khoản của thư điện tử; hộp thư điện tử; thành phần của địa chỉ thư điện tử\n- Biết cách đăng ký tài khoản thư điện tử và thực hiện được việc đăng nhập, soạn, gửi đăng xuất hộp thư điện tử"
+        },
+        {
+          "stt": "11",
+          "bai_num": "11",
+          "ten_bai": "Ôn tập cuối kỳ I",
+          "bai_title": "Ôn tập cuối kỳ I",
+          "so_tiet": "17",
+          "chu_de": "Chủ đề 3. Tổ chức lưu trữ, tìm kiếm và trao đổ thông tin",
+          "yccd_raw": "Củng cố các kiến thức đã học",
+          "yccd_bullets": [
+            "- Củng cố các kiến thức đã học"
+          ],
+          "yccd_text": "- Củng cố các kiến thức đã học"
+        },
+        {
+          "stt": "12",
+          "bai_num": "12",
+          "ten_bai": "Kiểm tra cuối kỳ I",
+          "bai_title": "Kiểm tra cuối kỳ I",
+          "so_tiet": "18",
+          "chu_de": "Chủ đề 3. Tổ chức lưu trữ, tìm kiếm và trao đổ thông tin",
+          "yccd_raw": "Đáp ứng YCCĐ của các chủ đề đã học",
+          "yccd_bullets": [
+            "- Đáp ứng YCCĐ của các chủ đề đã học"
+          ],
+          "yccd_text": "- Đáp ứng YCCĐ của các chủ đề đã học"
+        },
+        {
+          "stt": "13",
+          "bai_num": "9",
+          "ten_bai": "Bài 9. An toàn thông tin trên Internet",
+          "bai_title": "An toàn thông tin trên Internet",
+          "so_tiet": "19",
+          "chu_de": "Chủ đề 4. Đạo đức, pháp luật và văn hóa trong môi trường số",
+          "yccd_raw": "- Biết được một số tác hại và nguy cơ sử dụng Internet. Nêu và thực hiện một số biện pháp phòng ngừa\n- Trình bày được tầm quan trọng của sự an toàn và hợp pháp của thông tin cá nhân và tập thể\n- Bảo vệ được thông tin và tài khoản cá nhân với sự hỗ trợ của người lớn\n- Nêu được một vài cách thông dụng để chia sẻ thông tin của bản thân và tập thể sao cho an toàn và hợp pháp\n- Nhận diện được một số thông điệp lừa đảo hoặc mang nọi dung xấu",
+          "yccd_bullets": [
+            "- Biết được một số tác hại và nguy cơ sử dụng Internet. Nêu và thực hiện một số biện pháp phòng ngừa",
+            "- Trình bày được tầm quan trọng của sự an toàn và hợp pháp của thông tin cá nhân và tập thể",
+            "- Bảo vệ được thông tin và tài khoản cá nhân với sự hỗ trợ của người lớn",
+            "- Nêu được một vài cách thông dụng để chia sẻ thông tin của bản thân và tập thể sao cho an toàn và hợp pháp",
+            "- Nhận diện được một số thông điệp lừa đảo hoặc mang nọi dung xấu"
+          ],
+          "yccd_text": "- Biết được một số tác hại và nguy cơ sử dụng Internet. Nêu và thực hiện một số biện pháp phòng ngừa\n- Trình bày được tầm quan trọng của sự an toàn và hợp pháp của thông tin cá nhân và tập thể\n- Bảo vệ được thông tin và tài khoản cá nhân với sự hỗ trợ của người lớn\n- Nêu được một vài cách thông dụng để chia sẻ thông tin của bản thân và tập thể sao cho an toàn và hợp pháp\n- Nhận diện được một số thông điệp lừa đảo hoặc mang nọi dung xấu"
+        },
+        {
+          "stt": "14",
+          "bai_num": "10",
+          "ten_bai": "Bài 10. Sơ đồ tư duy",
+          "bai_title": "Sơ đồ tư duy",
+          "so_tiet": "20,21",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "- Sắp xếp được một cách logic và trình bày được dưới dạng sơ đồ tư duy các ý tưởng, khái niệm\n- Giải thích được lợi ích của sơ đồ tư duy, nêu được nhu cầu sử dụng phần mềm sơ đồ tư duy trong học tập và trao đổi TT\n- Tạo được sơ đồ tư duy đơn giản bằng phần mềm",
+          "yccd_bullets": [
+            "- Sắp xếp được một cách logic và trình bày được dưới dạng sơ đồ tư duy các ý tưởng, khái niệm",
+            "- Giải thích được lợi ích của sơ đồ tư duy, nêu được nhu cầu sử dụng phần mềm sơ đồ tư duy trong học tập và trao đổi TT",
+            "- Tạo được sơ đồ tư duy đơn giản bằng phần mềm"
+          ],
+          "yccd_text": "- Sắp xếp được một cách logic và trình bày được dưới dạng sơ đồ tư duy các ý tưởng, khái niệm\n- Giải thích được lợi ích của sơ đồ tư duy, nêu được nhu cầu sử dụng phần mềm sơ đồ tư duy trong học tập và trao đổi TT\n- Tạo được sơ đồ tư duy đơn giản bằng phần mềm"
+        },
+        {
+          "stt": "16",
+          "bai_num": "11",
+          "ten_bai": "Bài 11. Định dạng văn bản",
+          "bai_title": "Định dạng văn bản",
+          "so_tiet": "22,23",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "- Nêu được những chức năng đặc trưng của những phần mềm soạn thảo\n- Trình bày được tác dụng của công cụ căn lề, định dạng văn bản\n- Thực hiện được việc định dạng văn bản, trình bày trang văn bản và in",
+          "yccd_bullets": [
+            "- Nêu được những chức năng đặc trưng của những phần mềm soạn thảo",
+            "- Trình bày được tác dụng của công cụ căn lề, định dạng văn bản",
+            "- Thực hiện được việc định dạng văn bản, trình bày trang văn bản và in"
+          ],
+          "yccd_text": "- Nêu được những chức năng đặc trưng của những phần mềm soạn thảo\n- Trình bày được tác dụng của công cụ căn lề, định dạng văn bản\n- Thực hiện được việc định dạng văn bản, trình bày trang văn bản và in"
+        },
+        {
+          "stt": "17",
+          "bai_num": "12",
+          "ten_bai": "Bài 12. Trình bày thông tin ở dạng bảng",
+          "bai_title": "Trình bày thông tin ở dạng bảng",
+          "so_tiet": "24,25",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "- Biết được ưu điểm của việc trình bày thông tin ở dạng bảng\n- Trình bày được TT ở dạng bảng bằng phần mềm soạn thảo VB",
+          "yccd_bullets": [
+            "- Biết được ưu điểm của việc trình bày thông tin ở dạng bảng",
+            "- Trình bày được TT ở dạng bảng bằng phần mềm soạn thảo VB"
+          ],
+          "yccd_text": "- Biết được ưu điểm của việc trình bày thông tin ở dạng bảng\n- Trình bày được TT ở dạng bảng bằng phần mềm soạn thảo VB"
+        },
+        {
+          "stt": "18",
+          "bai_num": "18",
+          "ten_bai": "Kiểm tra giữa kỳ II",
+          "bai_title": "Kiểm tra giữa kỳ II",
+          "so_tiet": "26",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "Đáp ứng YCCĐ của các chủ đề đã học",
+          "yccd_bullets": [
+            "- Đáp ứng YCCĐ của các chủ đề đã học"
+          ],
+          "yccd_text": "- Đáp ứng YCCĐ của các chủ đề đã học"
+        },
+        {
+          "stt": "19",
+          "bai_num": "13",
+          "ten_bai": "Bài 13. Thực hành: Tìm kiếm và thay thế",
+          "bai_title": "Thực hành: Tìm kiếm và thay thế",
+          "so_tiet": "27",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "- Trình bày được tác dụng của công cụ tìm kiếm, thay thế trong phần mềm soạn thảo văn bản\n- Sử dụng được công cụ tìm kiếm và thay thế của phần mềm soạn thảo VB",
+          "yccd_bullets": [
+            "- Trình bày được tác dụng của công cụ tìm kiếm, thay thế trong phần mềm soạn thảo văn bản",
+            "- Sử dụng được công cụ tìm kiếm và thay thế của phần mềm soạn thảo VB"
+          ],
+          "yccd_text": "- Trình bày được tác dụng của công cụ tìm kiếm, thay thế trong phần mềm soạn thảo văn bản\n- Sử dụng được công cụ tìm kiếm và thay thế của phần mềm soạn thảo VB"
+        },
+        {
+          "stt": "20",
+          "bai_num": "14",
+          "ten_bai": "Bài 14. Thực hành tổng hợp. Hoàn thành sổ lưu niệm",
+          "bai_title": "Thực hành tổng hợp. Hoàn thành sổ lưu niệm",
+          "so_tiet": "28",
+          "chu_de": "Chủ đề 5. Ứng dụng tin học",
+          "yccd_raw": "- Biết cách tổng hợp, thay thế nội dung đã có thành một sản phẩm hoàn chỉnh",
+          "yccd_bullets": [
+            "- Biết cách tổng hợp, thay thế nội dung đã có thành một sản phẩm hoàn chỉnh"
+          ],
+          "yccd_text": "- Biết cách tổng hợp, thay thế nội dung đã có thành một sản phẩm hoàn chỉnh"
+        },
+        {
+          "stt": "21",
+          "bai_num": "15",
+          "ten_bai": "Bài 15. Thuật toán",
+          "bai_title": "Thuật toán",
+          "so_tiet": "29,30",
+          "chu_de": "Chủ đề 6. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Diễn tả được sơ lược khái niệm thuật toán, nêu một vài ví dụ minh họa\n- Biết thuật toán có thể được mô tả dưới dạng liệt kê hoặc sơ đồ khối",
+          "yccd_bullets": [
+            "- Diễn tả được sơ lược khái niệm thuật toán, nêu một vài ví dụ minh họa",
+            "- Biết thuật toán có thể được mô tả dưới dạng liệt kê hoặc sơ đồ khối"
+          ],
+          "yccd_text": "- Diễn tả được sơ lược khái niệm thuật toán, nêu một vài ví dụ minh họa\n- Biết thuật toán có thể được mô tả dưới dạng liệt kê hoặc sơ đồ khối"
+        },
+        {
+          "stt": "22",
+          "bai_num": "16",
+          "ten_bai": "Bài 16. Các cấu trúc điều khiển",
+          "bai_title": "Các cấu trúc điều khiển",
+          "so_tiet": "31,32",
+          "chu_de": "Chủ đề 6. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Biết các cấu trúc: Tuần tự, rẽ nhánh và lặp\n- Mô tả được thuật toán đơn giản có cấu trúc tuần tự, rẽ nhánh và lặp dưới dạng liệt kê hoặc sơ đồ khối",
+          "yccd_bullets": [
+            "- Biết các cấu trúc: Tuần tự, rẽ nhánh và lặp",
+            "- Mô tả được thuật toán đơn giản có cấu trúc tuần tự, rẽ nhánh và lặp dưới dạng liệt kê hoặc sơ đồ khối"
+          ],
+          "yccd_text": "- Biết các cấu trúc: Tuần tự, rẽ nhánh và lặp\n- Mô tả được thuật toán đơn giản có cấu trúc tuần tự, rẽ nhánh và lặp dưới dạng liệt kê hoặc sơ đồ khối"
+        },
+        {
+          "stt": "23",
+          "bai_num": "17",
+          "ten_bai": "Bài 17. Chương trình máy tính",
+          "bai_title": "Chương trình máy tính",
+          "so_tiet": "33",
+          "chu_de": "Chủ đề 6. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Biết được chương trình là mô tả một thuật toán để máy tính hiểu và thực hiện được.",
+          "yccd_bullets": [
+            "- Biết được chương trình là mô tả một thuật toán để máy tính hiểu và thực hiện được."
+          ],
+          "yccd_text": "- Biết được chương trình là mô tả một thuật toán để máy tính hiểu và thực hiện được."
+        },
+        {
+          "stt": "24",
+          "bai_num": "24",
+          "ten_bai": "Ôn tập cuối kỳ 2",
+          "bai_title": "Ôn tập cuối kỳ 2",
+          "so_tiet": "34",
+          "chu_de": "Chủ đề 6. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "Củng cố các kiến thức đã học",
+          "yccd_bullets": [
+            "- Củng cố các kiến thức đã học"
+          ],
+          "yccd_text": "- Củng cố các kiến thức đã học"
+        },
+        {
+          "stt": "25",
+          "bai_num": "25",
+          "ten_bai": "Kiểm tra cuối kỳ II",
+          "bai_title": "Kiểm tra cuối kỳ II",
+          "so_tiet": "35",
+          "chu_de": "Chủ đề 6. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "Đáp ứng YCCĐ của các chủ đề đã học",
+          "yccd_bullets": [
+            "- Đáp ứng YCCĐ của các chủ đề đã học"
+          ],
+          "yccd_text": "- Đáp ứng YCCĐ của các chủ đề đã học"
+        }
+      ]
+    },
+    "7": {
+      "grade": "7",
+      "total_lessons": 23,
+      "lessons": [
+        {
+          "stt": "1",
+          "bai_num": "1",
+          "ten_bai": "Bài 1. Thiết bị vào - ra",
+          "bai_title": "Thiết bị vào - ra",
+          "so_tiet": "1",
+          "chu_de": "CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG",
+          "yccd_raw": "- Củng cố và phát triển kiến thức về xử lí thông tin ở lớp 6\n- Biết và nhận ra được các thiết bị vào – ra có nhiều loại, hình dạng khác nhau \n- Biết được chức năng của các thiết bị vào – ra trong thu nhận, lưu trữ, xử lí và truyền thông tin.\n- Nêu được ví dụ cụ thể về những thao tác không đúng cách, gây ra lỗi cho thiết bị.",
+          "yccd_bullets": [
+            "- Củng cố và phát triển kiến thức về xử lí thông tin ở lớp 6",
+            "- Biết và nhận ra được các thiết bị vào – ra có nhiều loại, hình dạng khác nhau",
+            "- Biết được chức năng của các thiết bị vào – ra trong thu nhận, lưu trữ, xử lí và truyền thông tin.",
+            "- Nêu được ví dụ cụ thể về những thao tác không đúng cách, gây ra lỗi cho thiết bị."
+          ],
+          "yccd_text": "- Củng cố và phát triển kiến thức về xử lí thông tin ở lớp 6\n- Biết và nhận ra được các thiết bị vào – ra có nhiều loại, hình dạng khác nhau\n- Biết được chức năng của các thiết bị vào – ra trong thu nhận, lưu trữ, xử lí và truyền thông tin.\n- Nêu được ví dụ cụ thể về những thao tác không đúng cách, gây ra lỗi cho thiết bị."
+        },
+        {
+          "stt": "2",
+          "bai_num": "2",
+          "ten_bai": "Bài 2. Phần mềm máy tính",
+          "bai_title": "Phần mềm máy tính",
+          "so_tiet": "2",
+          "chu_de": "CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG",
+          "yccd_raw": "- Nhận thức được vai trò của phần mềm trong hoạt động của máy tính.\n- Phân chia phần mềm thành hai loại: hệ điều hành và phần mềm ứng dụng.",
+          "yccd_bullets": [
+            "- Nhận thức được vai trò của phần mềm trong hoạt động của máy tính.",
+            "- Phân chia phần mềm thành hai loại: hệ điều hành và phần mềm ứng dụng."
+          ],
+          "yccd_text": "- Nhận thức được vai trò của phần mềm trong hoạt động của máy tính.\n- Phân chia phần mềm thành hai loại: hệ điều hành và phần mềm ứng dụng."
+        },
+        {
+          "stt": "3",
+          "bai_num": "3",
+          "ten_bai": "Bài 3. Quản lý dữ liệu trong máy tính",
+          "bai_title": "Quản lý dữ liệu trong máy tính",
+          "so_tiet": "3,4",
+          "chu_de": "CHỦ ĐỀ 1. MÁY TÍNH VÀ CỘNG ĐỒNG",
+          "yccd_raw": "- Biết được tệp chương trình cũng là dữ liệu, có thể được lưu trữ trong máy tính.\n- Nêu được ví dụ về biện pháp an toàn dữ liệu như sao lưu dữ liệu, phòng chống xâm nhập trái phép và phòng chống virus,…",
+          "yccd_bullets": [
+            "- Biết được tệp chương trình cũng là dữ liệu, có thể được lưu trữ trong máy tính.",
+            "- Nêu được ví dụ về biện pháp an toàn dữ liệu như sao lưu dữ liệu, phòng chống xâm nhập trái phép và phòng chống virus,…"
+          ],
+          "yccd_text": "- Biết được tệp chương trình cũng là dữ liệu, có thể được lưu trữ trong máy tính.\n- Nêu được ví dụ về biện pháp an toàn dữ liệu như sao lưu dữ liệu, phòng chống xâm nhập trái phép và phòng chống virus,…"
+        },
+        {
+          "stt": "4",
+          "bai_num": "4",
+          "ten_bai": "Bài 4. Mạng xã hội và một số kênh trao đổi thông tin trên Internet",
+          "bai_title": "Mạng xã hội và một số kênh trao đổi thông tin trên Internet",
+          "so_tiet": "5,6",
+          "chu_de": "Chủ đề 2: TỔ CHỨC LƯU TRỮ, TÌM KIẾM VÀ TRAO ĐỔI THÔNG TIN",
+          "yccd_raw": "- Nêu được một số chức năng cơ bản của mạng xã hội. Nhận biết được một số website là mạng xã hội.\n- Sử dụng được một số chức năng cơ bản của một mạng xã hội để giao lưu và chia sẻ thông tin.\n- Nêu được tên một kênh trao đổi thông tin thông dụng trên Internet và loại thông tin trao đổi trên kênh đó.\n- Nêu được ví dụ cụ thể về hậu quả của việc sử dụng thông tin vào mục đích sai trái.\n- HS được học sử dụng một số kênh trao đổi thông tin trên Internet, chú trọng hơn đến mạng xã hội.",
+          "yccd_bullets": [
+            "- Nêu được một số chức năng cơ bản của mạng xã hội. Nhận biết được một số website là mạng xã hội.",
+            "- Sử dụng được một số chức năng cơ bản của một mạng xã hội để giao lưu và chia sẻ thông tin.",
+            "- Nêu được tên một kênh trao đổi thông tin thông dụng trên Internet và loại thông tin trao đổi trên kênh đó.",
+            "- Nêu được ví dụ cụ thể về hậu quả của việc sử dụng thông tin vào mục đích sai trái.",
+            "- HS được học sử dụng một số kênh trao đổi thông tin trên Internet, chú trọng hơn đến mạng xã hội."
+          ],
+          "yccd_text": "- Nêu được một số chức năng cơ bản của mạng xã hội. Nhận biết được một số website là mạng xã hội.\n- Sử dụng được một số chức năng cơ bản của một mạng xã hội để giao lưu và chia sẻ thông tin.\n- Nêu được tên một kênh trao đổi thông tin thông dụng trên Internet và loại thông tin trao đổi trên kênh đó.\n- Nêu được ví dụ cụ thể về hậu quả của việc sử dụng thông tin vào mục đích sai trái.\n- HS được học sử dụng một số kênh trao đổi thông tin trên Internet, chú trọng hơn đến mạng xã hội."
+        },
+        {
+          "stt": "5",
+          "bai_num": "5",
+          "ten_bai": "Bài 5. Ứng xử trên mạng",
+          "bai_title": "Ứng xử trên mạng",
+          "so_tiet": "7",
+          "chu_de": "Chủ đề 3:  ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ",
+          "yccd_raw": "- Thực hiện được giao tiếp qua mạng theo đúng quy tắc và bằng ngôn ngữ lịch sự, thể hiện ứng xử có văn hoá.\n- Biết được tác hại của bệnh nghiện Internet, từ đó có ý thức phòng tránh.\n- Biết nhờ người lớn giúp đỡ, tư vấn khi cần thiết trong quá trình ứng xử trên mạng.",
+          "yccd_bullets": [
+            "- Thực hiện được giao tiếp qua mạng theo đúng quy tắc và bằng ngôn ngữ lịch sự, thể hiện ứng xử có văn hoá.",
+            "- Biết được tác hại của bệnh nghiện Internet, từ đó có ý thức phòng tránh.",
+            "- Biết nhờ người lớn giúp đỡ, tư vấn khi cần thiết trong quá trình ứng xử trên mạng."
+          ],
+          "yccd_text": "- Thực hiện được giao tiếp qua mạng theo đúng quy tắc và bằng ngôn ngữ lịch sự, thể hiện ứng xử có văn hoá.\n- Biết được tác hại của bệnh nghiện Internet, từ đó có ý thức phòng tránh.\n- Biết nhờ người lớn giúp đỡ, tư vấn khi cần thiết trong quá trình ứng xử trên mạng."
+        },
+        {
+          "stt": "6",
+          "bai_num": "6",
+          "ten_bai": "Kiểm tra đánh giá giữa kỳ I",
+          "bai_title": "Kiểm tra đánh giá giữa kỳ I",
+          "so_tiet": "8",
+          "chu_de": "Chủ đề 3:  ĐẠO ĐỨC, PHÁP LUẬT VÀ VĂN HÓA TRONG MÔI TRƯỜNG SỐ",
+          "yccd_raw": "Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "7",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Làm quen với phần mềm bảng tính",
+          "bai_title": "Làm quen với phần mềm bảng tính",
+          "so_tiet": "9,10",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "- Nhận biết được một số khái niệm và chức năng cơ bản của phần mềm máy tính\n- Thực hiện được việc nhập và điều chỉnh dữ liệu trên bảng tính (mức đơn giản)\n- Thực hiện được một số thao tác đơn giản: thay đổi phông chữ, màu nền, căn chỉnh dữ liệu trong ô tính, thay đổi độ rộng cột.",
+          "yccd_bullets": [
+            "- Nhận biết được một số khái niệm và chức năng cơ bản của phần mềm máy tính",
+            "- Thực hiện được việc nhập và điều chỉnh dữ liệu trên bảng tính (mức đơn giản)",
+            "- Thực hiện được một số thao tác đơn giản: thay đổi phông chữ, màu nền, căn chỉnh dữ liệu trong ô tính, thay đổi độ rộng cột."
+          ],
+          "yccd_text": "- Nhận biết được một số khái niệm và chức năng cơ bản của phần mềm máy tính\n- Thực hiện được việc nhập và điều chỉnh dữ liệu trên bảng tính (mức đơn giản)\n- Thực hiện được một số thao tác đơn giản: thay đổi phông chữ, màu nền, căn chỉnh dữ liệu trong ô tính, thay đổi độ rộng cột."
+        },
+        {
+          "stt": "8",
+          "bai_num": "7",
+          "ten_bai": "Bài 7. Tính toán tự động trên bảng tính",
+          "bai_title": "Tính toán tự động trên bảng tính",
+          "so_tiet": "11,12",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "- Nhận biết được một số kiểu dữ liệu trên bảng tính.\n- Biết cách nhập và sao chép công thức trên bảng tính.\n- Giải thích được việc đưa các công thức vào bảng tính là một cách điểu khiển tính toán tự động trên dữ liệu.",
+          "yccd_bullets": [
+            "- Nhận biết được một số kiểu dữ liệu trên bảng tính.",
+            "- Biết cách nhập và sao chép công thức trên bảng tính.",
+            "- Giải thích được việc đưa các công thức vào bảng tính là một cách điểu khiển tính toán tự động trên dữ liệu."
+          ],
+          "yccd_text": "- Nhận biết được một số kiểu dữ liệu trên bảng tính.\n- Biết cách nhập và sao chép công thức trên bảng tính.\n- Giải thích được việc đưa các công thức vào bảng tính là một cách điểu khiển tính toán tự động trên dữ liệu."
+        },
+        {
+          "stt": "9",
+          "bai_num": "8",
+          "ten_bai": "Bài 8. Công cụ hỗ trợ tính toán",
+          "bai_title": "Công cụ hỗ trợ tính toán",
+          "so_tiet": "13,14",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "- Hs thực hiện được một số phép toán thông dụng, sử dụng được một số hàm đơn giản: MAX, MIN, AVERAGE, COUNT,…",
+          "yccd_bullets": [
+            "- Hs thực hiện được một số phép toán thông dụng, sử dụng được một số hàm đơn giản: MAX, MIN, AVERAGE, COUNT,…"
+          ],
+          "yccd_text": "- Hs thực hiện được một số phép toán thông dụng, sử dụng được một số hàm đơn giản: MAX, MIN, AVERAGE, COUNT,…"
+        },
+        {
+          "stt": "10",
+          "bai_num": "9",
+          "ten_bai": "Bài  9. Trình bày bảng tính",
+          "bai_title": "Trình bày bảng tính",
+          "so_tiet": "15,16",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "- Hs biết và thực hiện được một số chức năng định dạng dữ liệu số và trình bày bảng tính.\n- Áp dụng được một số hàm tính toán dữ liệu như Max, min, sum, average, count,..vào dự án Trường học xanh",
+          "yccd_bullets": [
+            "- Hs biết và thực hiện được một số chức năng định dạng dữ liệu số và trình bày bảng tính.",
+            "- Áp dụng được một số hàm tính toán dữ liệu như Max, min, sum, average, count,..vào dự án Trường học xanh"
+          ],
+          "yccd_text": "- Hs biết và thực hiện được một số chức năng định dạng dữ liệu số và trình bày bảng tính.\n- Áp dụng được một số hàm tính toán dữ liệu như Max, min, sum, average, count,..vào dự án Trường học xanh"
+        },
+        {
+          "stt": "11",
+          "bai_num": "11",
+          "ten_bai": "Ôn tập cuối kỳ I",
+          "bai_title": "Ôn tập cuối kỳ I",
+          "so_tiet": "17",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua ba chủ đề 1,2,3 đã học",
+          "yccd_bullets": [
+            "- Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua ba chủ đề 1,2,3 đã học"
+          ],
+          "yccd_text": "- Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua ba chủ đề 1,2,3 đã học"
+        },
+        {
+          "stt": "12",
+          "bai_num": "12",
+          "ten_bai": "KTĐG cuối kỳ I",
+          "bai_title": "KTĐG cuối kỳ I",
+          "so_tiet": "18",
+          "chu_de": "Chủ đề 4: ỨNG DỤNG TIN HỌC",
+          "yccd_raw": "Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "13",
+          "bai_num": "10",
+          "ten_bai": "Bài 10. Hoàn thiện bảng tính",
+          "bai_title": "Hoàn thiện bảng tính",
+          "so_tiet": "19,20",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Thực hiện được các thao tác hoàn thiện và in một bảng tính.\n- Thực hành hoàn thiện dự án.\n- Sử dụng được bảng tính điện tử để giải quyết một vài công việc cụ thể đơn giản.",
+          "yccd_bullets": [
+            "- Thực hiện được các thao tác hoàn thiện và in một bảng tính.",
+            "- Thực hành hoàn thiện dự án.",
+            "- Sử dụng được bảng tính điện tử để giải quyết một vài công việc cụ thể đơn giản."
+          ],
+          "yccd_text": "- Thực hiện được các thao tác hoàn thiện và in một bảng tính.\n- Thực hành hoàn thiện dự án.\n- Sử dụng được bảng tính điện tử để giải quyết một vài công việc cụ thể đơn giản."
+        },
+        {
+          "stt": "14",
+          "bai_num": "11",
+          "ten_bai": "Bài 11. Tạo bài trình chiếu",
+          "bai_title": "Tạo bài trình chiếu",
+          "so_tiet": "21,22",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Nêu được một số chức năng cơ bản của phần mềm trình chiếu\n- Tạo được một số bài trình chiếu có tiêu đề, cấu trúc phân cấp",
+          "yccd_bullets": [
+            "- Nêu được một số chức năng cơ bản của phần mềm trình chiếu",
+            "- Tạo được một số bài trình chiếu có tiêu đề, cấu trúc phân cấp"
+          ],
+          "yccd_text": "- Nêu được một số chức năng cơ bản của phần mềm trình chiếu\n- Tạo được một số bài trình chiếu có tiêu đề, cấu trúc phân cấp"
+        },
+        {
+          "stt": "15",
+          "bai_num": "12",
+          "ten_bai": "Bài 12. Định dạng đối tượng trên trang chiếu",
+          "bai_title": "Định dạng đối tượng trên trang chiếu",
+          "so_tiet": "23,24",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Sao chép được dữ liệu từ tệp văn bản sang trang trình chiếu. \n- Đưa được hình ảnh minh hoạ vào bài trình chiếu.\n- Biết sử dụng các định dạng cho văn bản, ảnh minh hoạ một cách hợp lí.",
+          "yccd_bullets": [
+            "- Sao chép được dữ liệu từ tệp văn bản sang trang trình chiếu.",
+            "- Đưa được hình ảnh minh hoạ vào bài trình chiếu.",
+            "- Biết sử dụng các định dạng cho văn bản, ảnh minh hoạ một cách hợp lí."
+          ],
+          "yccd_text": "- Sao chép được dữ liệu từ tệp văn bản sang trang trình chiếu.\n- Đưa được hình ảnh minh hoạ vào bài trình chiếu.\n- Biết sử dụng các định dạng cho văn bản, ảnh minh hoạ một cách hợp lí."
+        },
+        {
+          "stt": "16",
+          "bai_num": "13",
+          "ten_bai": "Bài 13. Thực hành tổng hợp: Hoàn thiện bài trình chiếu",
+          "bai_title": "Thực hành tổng hợp: Hoàn thiện bài trình chiếu",
+          "so_tiet": "25",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.\n- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh.",
+          "yccd_bullets": [
+            "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.",
+            "- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh."
+          ],
+          "yccd_text": "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.\n- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh."
+        },
+        {
+          "stt": "17",
+          "bai_num": "17",
+          "ten_bai": "KTĐG giữa kỳ II",
+          "bai_title": "KTĐG giữa kỳ II",
+          "so_tiet": "26",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "18",
+          "bai_num": "13",
+          "ten_bai": "Bài 13. Thực hành tổng hợp: Hoàn thiện bài trình chiếu (tt)",
+          "bai_title": "Thực hành tổng hợp: Hoàn thiện bài trình chiếu (tt)",
+          "so_tiet": "27, 28",
+          "chu_de": "HỌC KỲ II",
+          "yccd_raw": "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.\n- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh.",
+          "yccd_bullets": [
+            "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.",
+            "- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh."
+          ],
+          "yccd_text": "- Biết đưa hiệu ứng động vào bài trình chiếu và sử dụng hiệu ứng một cách hợp lí.\n- Biết cách tổng hợp, sắp xếp các nội dung đã có thành một bài trình chiếu hoàn chỉnh."
+        },
+        {
+          "stt": "19",
+          "bai_num": "14",
+          "ten_bai": "Bài 14.Thuật toán tìm kiếm tuần tự",
+          "bai_title": "Thuật toán tìm kiếm tuần tự",
+          "so_tiet": "29",
+          "chu_de": "CHỦ ĐỀ 5. GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "yccd_raw": "- Giải thích được thuật toán tìm kiếm tuần tự.\n- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm tuần tự trên một bộ dữ liệu vào có kích thước nhỏ.",
+          "yccd_bullets": [
+            "- Giải thích được thuật toán tìm kiếm tuần tự.",
+            "- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm tuần tự trên một bộ dữ liệu vào có kích thước nhỏ."
+          ],
+          "yccd_text": "- Giải thích được thuật toán tìm kiếm tuần tự.\n- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm tuần tự trên một bộ dữ liệu vào có kích thước nhỏ."
+        },
+        {
+          "stt": "20",
+          "bai_num": "15",
+          "ten_bai": "Bài 15.Thuật toán tìm kiếm nhị phân",
+          "bai_title": "Thuật toán tìm kiếm nhị phân",
+          "so_tiet": "30,31",
+          "chu_de": "CHỦ ĐỀ 5. GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "yccd_raw": "- Giải thích được thuật toán tìm kiếm nhị phân. \n- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm nhị phân trên một bộ dữ liệu vào có kích thước nhỏ. \n- Giải thích được mối liên quan giữa sắp xếp và tìm kiếm, nêu được ví dụ minh hoạ.",
+          "yccd_bullets": [
+            "- Giải thích được thuật toán tìm kiếm nhị phân.",
+            "- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm nhị phân trên một bộ dữ liệu vào có kích thước nhỏ.",
+            "- Giải thích được mối liên quan giữa sắp xếp và tìm kiếm, nêu được ví dụ minh hoạ."
+          ],
+          "yccd_text": "- Giải thích được thuật toán tìm kiếm nhị phân.\n- Biểu diễn và mô phỏng được hoạt động của thuật toán tìm kiếm nhị phân trên một bộ dữ liệu vào có kích thước nhỏ.\n- Giải thích được mối liên quan giữa sắp xếp và tìm kiếm, nêu được ví dụ minh hoạ."
+        },
+        {
+          "stt": "21",
+          "bai_num": "16",
+          "ten_bai": "Bài 16. Thuật toán sắp xếp",
+          "bai_title": "Thuật toán sắp xếp",
+          "so_tiet": "32,33",
+          "chu_de": "CHỦ ĐỀ 5. GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "yccd_raw": "- Giải thích được một vài thuật toán sắp xếp cơ bản.\n- Biểu diễn và mô phỏng được hoạt động của thuật toán sắp xếp với bộ dữ liệu đầu vào có kích thước nhỏ.\n- Nêu được ý nghĩa của việc chia một bài toán thành những bài toán nhỏ hơn.",
+          "yccd_bullets": [
+            "- Giải thích được một vài thuật toán sắp xếp cơ bản.",
+            "- Biểu diễn và mô phỏng được hoạt động của thuật toán sắp xếp với bộ dữ liệu đầu vào có kích thước nhỏ.",
+            "- Nêu được ý nghĩa của việc chia một bài toán thành những bài toán nhỏ hơn."
+          ],
+          "yccd_text": "- Giải thích được một vài thuật toán sắp xếp cơ bản.\n- Biểu diễn và mô phỏng được hoạt động của thuật toán sắp xếp với bộ dữ liệu đầu vào có kích thước nhỏ.\n- Nêu được ý nghĩa của việc chia một bài toán thành những bài toán nhỏ hơn."
+        },
+        {
+          "stt": "22",
+          "bai_num": "22",
+          "ten_bai": "Ôn tập cuối kỳ II",
+          "bai_title": "Ôn tập cuối kỳ II",
+          "so_tiet": "34",
+          "chu_de": "CHỦ ĐỀ 5. GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "yccd_raw": "Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua hai chủ đề 4 từ bài 10 đến bài 16 đã học",
+          "yccd_bullets": [
+            "- Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua hai chủ đề 4 từ bài 10 đến bài 16 đã học"
+          ],
+          "yccd_text": "- Hệ thống lại kiến thức từ đầu học kỳ II đến nay qua hai chủ đề 4 từ bài 10 đến bài 16 đã học"
+        },
+        {
+          "stt": "23",
+          "bai_num": "23",
+          "ten_bai": "KTĐG cuối kỳ II",
+          "bai_title": "KTĐG cuối kỳ II",
+          "so_tiet": "35",
+          "chu_de": "CHỦ ĐỀ 5. GIẢI QUYẾT VẤN ĐỀ VỚI SỰ TRỢ GIÚP CỦA MÁY TÍNH",
+          "yccd_raw": "Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        }
+      ]
+    },
+    "8": {
+      "grade": "8",
+      "total_lessons": 23,
+      "lessons": [
+        {
+          "stt": "1",
+          "bai_num": "1",
+          "ten_bai": "Bài 1. Lược sử công cụ tính toán",
+          "bai_title": "Lược sử công cụ tính toán",
+          "so_tiet": "1",
+          "chu_de": "Chủ đề 1. Máy tính và cộng đồng",
+          "yccd_raw": "- Trình bày được sơ lược lịch sử phát triển máy tính.\n- Nêu được ví dụ cho thấy sự phát triển máy tính đã đem đến những thay đổi lớn lao cho xã hội loài người.",
+          "yccd_bullets": [
+            "- Trình bày được sơ lược lịch sử phát triển máy tính.",
+            "- Nêu được ví dụ cho thấy sự phát triển máy tính đã đem đến những thay đổi lớn lao cho xã hội loài người."
+          ],
+          "yccd_text": "- Trình bày được sơ lược lịch sử phát triển máy tính.\n- Nêu được ví dụ cho thấy sự phát triển máy tính đã đem đến những thay đổi lớn lao cho xã hội loài người."
+        },
+        {
+          "stt": "2",
+          "bai_num": "2",
+          "ten_bai": "Bài 2. Thông tin trong môi trường số",
+          "bai_title": "Thông tin trong môi trường số",
+          "so_tiet": "2",
+          "chu_de": "Chủ đề 2. Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+          "yccd_raw": "- Nêu được các đặc điểm của thông tin số: đa dạng, được thu thập ngày càng nhanh và nhiều, được lưu trữ với dung lượng khổng lồ bởi nhiều tổ chức và cá nhân, có tính bản quyền, có độ tin cậy rất khác nhau, có các công cụ tìm kiếm, chuyển đổi, truyền và xử lí hiệu quả.\n- Trình bày được tầm quan trọng của việc khai thác các nguồn thông tin đáng tin cậy, nêu được ví dụ minh hoạ.",
+          "yccd_bullets": [
+            "- Nêu được các đặc điểm của thông tin số: đa dạng, được thu thập ngày càng nhanh và nhiều, được lưu trữ với dung lượng khổng lồ bởi nhiều tổ chức và cá nhân, có tính bản quyền, có độ tin cậy rất khác nhau, có các công cụ tìm kiếm, chuyển đổi, truyền và xử lí hiệu quả.",
+            "- Trình bày được tầm quan trọng của việc khai thác các nguồn thông tin đáng tin cậy, nêu được ví dụ minh hoạ."
+          ],
+          "yccd_text": "- Nêu được các đặc điểm của thông tin số: đa dạng, được thu thập ngày càng nhanh và nhiều, được lưu trữ với dung lượng khổng lồ bởi nhiều tổ chức và cá nhân, có tính bản quyền, có độ tin cậy rất khác nhau, có các công cụ tìm kiếm, chuyển đổi, truyền và xử lí hiệu quả.\n- Trình bày được tầm quan trọng của việc khai thác các nguồn thông tin đáng tin cậy, nêu được ví dụ minh hoạ."
+        },
+        {
+          "stt": "3",
+          "bai_num": "3",
+          "ten_bai": "Bài 3. Thực hành: Khai thác thông tin số",
+          "bai_title": "Thực hành: Khai thác thông tin số",
+          "so_tiet": "3,4 (TH)",
+          "chu_de": "Chủ đề 2. Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+          "yccd_raw": "- Sử dụng được công cụ tìm kiếm, xử lí và trao đổi thông tin trong môi trường số. Nêu được ví dụ minh hoạ. \n- Chủ động tìm kiếm được thông tin để thực hiện nhiệm vụ (thông qua bài tập cụ thể).\n- Đánh giá được lợi ích của thông tin tìm được trong giải quyết vấn đề, nêu được ví dụ minh hoạ.",
+          "yccd_bullets": [
+            "- Sử dụng được công cụ tìm kiếm, xử lí và trao đổi thông tin trong môi trường số. Nêu được ví dụ minh hoạ.",
+            "- Chủ động tìm kiếm được thông tin để thực hiện nhiệm vụ (thông qua bài tập cụ thể).",
+            "- Đánh giá được lợi ích của thông tin tìm được trong giải quyết vấn đề, nêu được ví dụ minh hoạ."
+          ],
+          "yccd_text": "- Sử dụng được công cụ tìm kiếm, xử lí và trao đổi thông tin trong môi trường số. Nêu được ví dụ minh hoạ.\n- Chủ động tìm kiếm được thông tin để thực hiện nhiệm vụ (thông qua bài tập cụ thể).\n- Đánh giá được lợi ích của thông tin tìm được trong giải quyết vấn đề, nêu được ví dụ minh hoạ."
+        },
+        {
+          "stt": "5",
+          "bai_num": "5",
+          "ten_bai": "Bài 5. Sử dụng bảng tính giải quyết bài toán thực tế.",
+          "bai_title": "Sử dụng bảng tính giải quyết bài toán thực tế.",
+          "so_tiet": "6,7TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Giải thích được sự khác nhau giữa địa chỉ tương đối và địa chỉ tuyệt đối của một ô tính.\n- Giải thích được sự thay đổi địa chỉ tương đối trong công thức khi sao chép công thức.\n- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Sao chép được dữ liệu từ các tệp văn bản, trang trình chiếu sang trang tính.",
+          "yccd_bullets": [
+            "- Giải thích được sự khác nhau giữa địa chỉ tương đối và địa chỉ tuyệt đối của một ô tính.",
+            "- Giải thích được sự thay đổi địa chỉ tương đối trong công thức khi sao chép công thức.",
+            "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.",
+            "- Sao chép được dữ liệu từ các tệp văn bản, trang trình chiếu sang trang tính."
+          ],
+          "yccd_text": "- Giải thích được sự khác nhau giữa địa chỉ tương đối và địa chỉ tuyệt đối của một ô tính.\n- Giải thích được sự thay đổi địa chỉ tương đối trong công thức khi sao chép công thức.\n- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Sao chép được dữ liệu từ các tệp văn bản, trang trình chiếu sang trang tính."
+        },
+        {
+          "stt": "6",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Sắp xếp và lọc dữ liệu",
+          "bai_title": "Sắp xếp và lọc dữ liệu",
+          "so_tiet": "8",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.\n- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.\n- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính.",
+          "yccd_bullets": [
+            "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.",
+            "- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.",
+            "- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.",
+            "- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính."
+          ],
+          "yccd_text": "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.\n- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.\n- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính."
+        },
+        {
+          "stt": "7",
+          "bai_num": "7",
+          "ten_bai": "Kiểm tra giữa học kì I",
+          "bai_title": "Kiểm tra giữa học kì I",
+          "so_tiet": "9",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "8",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Sắp xếp và lọc dữ liệu",
+          "bai_title": "Sắp xếp và lọc dữ liệu",
+          "so_tiet": "10TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.\n- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.\n- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính.",
+          "yccd_bullets": [
+            "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.",
+            "- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.",
+            "- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.",
+            "- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính."
+          ],
+          "yccd_text": "- Sử dụng được phần mềm bảng tính trợ giúp giải quyết bài toán thực tế.\n- Nêu được một số tình huống thực tế cần sử dụng chức năng lọc và sắp xếp dữ liệu.\n- Thực hiện được các thao tác lọc và sắp xếp dữ liệu.\n- Nêu được một số tình huống thực tế cần sử dụng các chức năng đó của phần mềm bảng tính."
+        },
+        {
+          "stt": "9",
+          "bai_num": "7",
+          "ten_bai": "Bài 7. Trình bày dữ liệu bằng biểu đồ (Trực quan hóa dữ liệu)",
+          "bai_title": "Trình bày dữ liệu bằng biểu đồ (Trực quan hóa dữ liệu)",
+          "so_tiet": "11,12TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nêu được một số tình huống thực tế cần sử dụng chức năng tạo biểu đồ.\n- Thực hiện được thao tác tạo biểu đồ của bảng tính.",
+          "yccd_bullets": [
+            "- Nêu được một số tình huống thực tế cần sử dụng chức năng tạo biểu đồ.",
+            "- Thực hiện được thao tác tạo biểu đồ của bảng tính."
+          ],
+          "yccd_text": "- Nêu được một số tình huống thực tế cần sử dụng chức năng tạo biểu đồ.\n- Thực hiện được thao tác tạo biểu đồ của bảng tính."
+        },
+        {
+          "stt": "10",
+          "bai_num": "8",
+          "ten_bai": "a. Soạn thảo văn bản và trình chiếu nâng cao Bài 8a. Làm việc với danh sách dạng liệt kê và hình ảnh trong văn bản",
+          "bai_title": "a. Làm việc với danh sách dạng liệt kê và hình ảnh trong văn bản",
+          "so_tiet": "13,14TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "Thực hiện được các thao tác: chèn thêm, xoá bỏ, co dãn hình ảnh, vẽ hình đồ hoạ trong văn bản, tạo danh sách dạng liệt kê.",
+          "yccd_bullets": [
+            "- Thực hiện được các thao tác: chèn thêm, xoá bỏ, co dãn hình ảnh, vẽ hình đồ hoạ trong văn bản, tạo danh sách dạng liệt kê."
+          ],
+          "yccd_text": "- Thực hiện được các thao tác: chèn thêm, xoá bỏ, co dãn hình ảnh, vẽ hình đồ hoạ trong văn bản, tạo danh sách dạng liệt kê."
+        },
+        {
+          "stt": "11",
+          "bai_num": "9",
+          "ten_bai": "Bài 9a. Tạo đầu trang, chân trang cho văn bản",
+          "bai_title": "a. Tạo đầu trang, chân trang cho văn bản",
+          "so_tiet": "15,16TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang cho văn bản.",
+          "yccd_bullets": [
+            "- Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang cho văn bản."
+          ],
+          "yccd_text": "- Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang cho văn bản."
+        },
+        {
+          "stt": "12",
+          "bai_num": "12",
+          "ten_bai": "Ôn tập cuối học kì I",
+          "bai_title": "Ôn tập cuối học kì I",
+          "so_tiet": "17",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "13",
+          "bai_num": "13",
+          "ten_bai": "Kiểm tra cuối học kì I",
+          "bai_title": "Kiểm tra cuối học kì I",
+          "so_tiet": "18",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "14",
+          "bai_num": "10",
+          "ten_bai": "Bài 10a. Định dạng nâng cao cho trang chiếu",
+          "bai_title": "a. Định dạng nâng cao cho trang chiếu",
+          "so_tiet": "19,20 TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Chọn / đặt được màu sắc, cỡ chữ hài hoà và hợp lí với nội dung.\n- Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang.",
+          "yccd_bullets": [
+            "- Chọn / đặt được màu sắc, cỡ chữ hài hoà và hợp lí với nội dung.",
+            "- Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang."
+          ],
+          "yccd_text": "- Chọn / đặt được màu sắc, cỡ chữ hài hoà và hợp lí với nội dung.\n- Thực hiện được thao tác đánh số trang, thêm đầu trang và chân trang."
+        },
+        {
+          "stt": "15",
+          "bai_num": "11",
+          "ten_bai": "Bài 11a. Sử dụng bản mẫu tạo bài trình chiếu",
+          "bai_title": "a. Sử dụng bản mẫu tạo bài trình chiếu",
+          "so_tiet": "21,22 TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Sử dụng được các bản mẫu (template) tạo bài trình chiếu.\n- Nhúng được vào trang chiếu đường dẫn đến video hay tài liệu khác.\n- Tạo được một số sản phẩm là văn bản có tính thẩm mĩ phục vụ nhu cầu thực tế.",
+          "yccd_bullets": [
+            "- Sử dụng được các bản mẫu (template) tạo bài trình chiếu.",
+            "- Nhúng được vào trang chiếu đường dẫn đến video hay tài liệu khác.",
+            "- Tạo được một số sản phẩm là văn bản có tính thẩm mĩ phục vụ nhu cầu thực tế."
+          ],
+          "yccd_text": "- Sử dụng được các bản mẫu (template) tạo bài trình chiếu.\n- Nhúng được vào trang chiếu đường dẫn đến video hay tài liệu khác.\n- Tạo được một số sản phẩm là văn bản có tính thẩm mĩ phục vụ nhu cầu thực tế."
+        },
+        {
+          "stt": "16",
+          "bai_num": "12",
+          "ten_bai": "Bài 12. Từ thuật toán đến chương trình",
+          "bai_title": "Từ thuật toán đến chương trình",
+          "so_tiet": "23,24 TH",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Mô tả được kịch bản đơn giản dưới dạng thuật toán và tạo được một chương trình đơn giản.\n- Hiểu được chương trình là dãy các lệnh điều khiển máy tính thực hiện một thuật toán.",
+          "yccd_bullets": [
+            "- Mô tả được kịch bản đơn giản dưới dạng thuật toán và tạo được một chương trình đơn giản.",
+            "- Hiểu được chương trình là dãy các lệnh điều khiển máy tính thực hiện một thuật toán."
+          ],
+          "yccd_text": "- Mô tả được kịch bản đơn giản dưới dạng thuật toán và tạo được một chương trình đơn giản.\n- Hiểu được chương trình là dãy các lệnh điều khiển máy tính thực hiện một thuật toán."
+        },
+        {
+          "stt": "17",
+          "bai_num": "13",
+          "ten_bai": "Bài 13. Biểu diễn dữ liệu",
+          "bai_title": "Biểu diễn dữ liệu",
+          "so_tiet": "25",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan.",
+          "yccd_bullets": [
+            "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan."
+          ],
+          "yccd_text": "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan."
+        },
+        {
+          "stt": "18",
+          "bai_num": "18",
+          "ten_bai": "Kiểm tra giữa học kì II",
+          "bai_title": "Kiểm tra giữa học kì II",
+          "so_tiet": "26",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "19",
+          "bai_num": "13",
+          "ten_bai": "Bài 13. Biểu diễn dữ liệu",
+          "bai_title": "Biểu diễn dữ liệu",
+          "so_tiet": "27 TH",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan.",
+          "yccd_bullets": [
+            "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan."
+          ],
+          "yccd_text": "- Nêu được khái niệm hằng, biến, kiểu dữ liệu, biểu thức và sử dụng được các khái niệm này ở các chương trình đơn giản trong môi trường lập trình trực quan."
+        },
+        {
+          "stt": "20",
+          "bai_num": "14",
+          "ten_bai": "Bài 14. Cấu trúc điều khiển",
+          "bai_title": "Cấu trúc điều khiển",
+          "so_tiet": "28,29 TH",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Thể hiện được cấu trúc tuần tự, rẽ nhánh và lặp ở chương trình trong môi trường lập trình trực quan.",
+          "yccd_bullets": [
+            "- Thể hiện được cấu trúc tuần tự, rẽ nhánh và lặp ở chương trình trong môi trường lập trình trực quan."
+          ],
+          "yccd_text": "- Thể hiện được cấu trúc tuần tự, rẽ nhánh và lặp ở chương trình trong môi trường lập trình trực quan."
+        },
+        {
+          "stt": "21",
+          "bai_num": "15",
+          "ten_bai": "Bài 15. Gỡ lỗi",
+          "bai_title": "Gỡ lỗi",
+          "so_tiet": "30,31 TH",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Chạy thử, tìm lỗi và sửa được lỗi cho chương trình.",
+          "yccd_bullets": [
+            "- Chạy thử, tìm lỗi và sửa được lỗi cho chương trình."
+          ],
+          "yccd_text": "- Chạy thử, tìm lỗi và sửa được lỗi cho chương trình."
+        },
+        {
+          "stt": "22",
+          "bai_num": "16",
+          "ten_bai": "Bài 16. Tin học với nghề nghiệp",
+          "bai_title": "Tin học với nghề nghiệp",
+          "so_tiet": "32,33",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nêu được một số nghề nghiệp mà ứng dụng tin học sẽ làm tăng hiệu quả công việc.\n- Nêu được tên một số nghề thuộc lĩnh vực tin học và một số nghề liên quan đến ứng dụng tin học.\n- Nhận thức và trình bày được vấn đề bình đẳng giới trong việc sử dụng máy tính và trong ứng dụng tin học, nêu được ví dụ minh hoạ.",
+          "yccd_bullets": [
+            "- Nêu được một số nghề nghiệp mà ứng dụng tin học sẽ làm tăng hiệu quả công việc.",
+            "- Nêu được tên một số nghề thuộc lĩnh vực tin học và một số nghề liên quan đến ứng dụng tin học.",
+            "- Nhận thức và trình bày được vấn đề bình đẳng giới trong việc sử dụng máy tính và trong ứng dụng tin học, nêu được ví dụ minh hoạ."
+          ],
+          "yccd_text": "- Nêu được một số nghề nghiệp mà ứng dụng tin học sẽ làm tăng hiệu quả công việc.\n- Nêu được tên một số nghề thuộc lĩnh vực tin học và một số nghề liên quan đến ứng dụng tin học.\n- Nhận thức và trình bày được vấn đề bình đẳng giới trong việc sử dụng máy tính và trong ứng dụng tin học, nêu được ví dụ minh hoạ."
+        },
+        {
+          "stt": "23",
+          "bai_num": "23",
+          "ten_bai": "Ôn tập cuối học kì II",
+          "bai_title": "Ôn tập cuối học kì II",
+          "so_tiet": "34",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Củng cố kiến thức đã học.",
+          "yccd_bullets": [
+            "- Củng cố kiến thức đã học."
+          ],
+          "yccd_text": "- Củng cố kiến thức đã học."
+        },
+        {
+          "stt": "24",
+          "bai_num": "24",
+          "ten_bai": "Kiểm tra cuối học kì II",
+          "bai_title": "Kiểm tra cuối học kì II",
+          "so_tiet": "35",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        }
+      ]
+    },
+    "9": {
+      "grade": "9",
+      "total_lessons": 25,
+      "lessons": [
+        {
+          "stt": "1",
+          "bai_num": "1",
+          "ten_bai": "Bài 1. Thế giới kĩ thuật số",
+          "bai_title": "Thế giới kĩ thuật số",
+          "so_tiet": "1",
+          "chu_de": "Chủ đề 1. Máy tính và cộng đồng",
+          "yccd_raw": "˗ Nhận biết được sự có mặt của các thiết bị có gắn bộ xử lý thông tin ở khắp nơi và nêu được ví dụ minh họa.\n˗ Hiểu được khả năng của máy tính và chỉ ra được một số ứng dụng thực tế của nó trong khoa học kỹ thuật và đời sống.\n˗ Giải thích được tác động của công nghệ thông tin lên giáo dục và xã hội thông qua các vấn đề cụ thể.",
+          "yccd_bullets": [
+            "- Nhận biết được sự có mặt của các thiết bị có gắn bộ xử lý thông tin ở khắp nơi và nêu được ví dụ minh họa.",
+            "- Hiểu được khả năng của máy tính và chỉ ra được một số ứng dụng thực tế của nó trong khoa học kỹ thuật và đời sống.",
+            "- Giải thích được tác động của công nghệ thông tin lên giáo dục và xã hội thông qua các vấn đề cụ thể."
+          ],
+          "yccd_text": "- Nhận biết được sự có mặt của các thiết bị có gắn bộ xử lý thông tin ở khắp nơi và nêu được ví dụ minh họa.\n- Hiểu được khả năng của máy tính và chỉ ra được một số ứng dụng thực tế của nó trong khoa học kỹ thuật và đời sống.\n- Giải thích được tác động của công nghệ thông tin lên giáo dục và xã hội thông qua các vấn đề cụ thể."
+        },
+        {
+          "stt": "2",
+          "bai_num": "2",
+          "ten_bai": "Bài 2. Thông tin trong giải quyết vấn đề",
+          "bai_title": "Thông tin trong giải quyết vấn đề",
+          "so_tiet": "2,3",
+          "chu_de": "Chủ đề 2. Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+          "yccd_raw": "- Giải thích được sự cần thiết phải quan tâm đến chất lượng thông tin khi tìm kiếm, tiếp nhận và trao đổi thông tin. Nêu được ví dụ minh hoạ.\n- Giải thích được tính mới, tính chính xác, tính đầy đủ, tính sử dụng được của thông tin. Nêu được ví dụ minh hoạ.",
+          "yccd_bullets": [
+            "- Giải thích được sự cần thiết phải quan tâm đến chất lượng thông tin khi tìm kiếm, tiếp nhận và trao đổi thông tin. Nêu được ví dụ minh hoạ.",
+            "- Giải thích được tính mới, tính chính xác, tính đầy đủ, tính sử dụng được của thông tin. Nêu được ví dụ minh hoạ."
+          ],
+          "yccd_text": "- Giải thích được sự cần thiết phải quan tâm đến chất lượng thông tin khi tìm kiếm, tiếp nhận và trao đổi thông tin. Nêu được ví dụ minh hoạ.\n- Giải thích được tính mới, tính chính xác, tính đầy đủ, tính sử dụng được của thông tin. Nêu được ví dụ minh hoạ."
+        },
+        {
+          "stt": "3",
+          "bai_num": "3",
+          "ten_bai": "Bài 3. Thực hành: Đánh giá chất lượng thông tin",
+          "bai_title": "Thực hành: Đánh giá chất lượng thông tin",
+          "so_tiet": "4TH",
+          "chu_de": "Chủ đề 2. Tổ chức lưu trữ, tìm kiếm và trao đổi thông tin",
+          "yccd_raw": "- Tìm kiếm được thông tin để giải quyết vấn đề.\n- Đánh giá được chất lượng thông tin trong giải quyết vấn đề.",
+          "yccd_bullets": [
+            "- Tìm kiếm được thông tin để giải quyết vấn đề.",
+            "- Đánh giá được chất lượng thông tin trong giải quyết vấn đề."
+          ],
+          "yccd_text": "- Tìm kiếm được thông tin để giải quyết vấn đề.\n- Đánh giá được chất lượng thông tin trong giải quyết vấn đề."
+        },
+        {
+          "stt": "4",
+          "bai_num": "4",
+          "ten_bai": "Bài 4. Một số vấn đề pháp lí về sử dụng dịch vụ Internet",
+          "bai_title": "Một số vấn đề pháp lí về sử dụng dịch vụ Internet",
+          "so_tiet": "5,6",
+          "chu_de": "Chủ đề 3. Đạo đức, pháp luật và văn hóa trong môi trường số",
+          "yccd_raw": "˗ Trình bày được một số tác động tiêu cực của công nghệ kỹ thuật số đối với đời sống con người và xã hội, nêu được ví dụ minh họa.\n˗ Nêu được một số nội dung liên quan đến luật công nghệ thông tin, nghị định về sử dụng dịch vụ internet, các khía cạnh pháp lý của việc sở hữu, sử dụng và trao đổi thông tin.\n˗ Nêu được một số hành vi vi phạm pháp luật, trái đạo đức, thiếu văn hóa khi hoạt động trong môi trường số thông qua một vài ví dụ.",
+          "yccd_bullets": [
+            "- Trình bày được một số tác động tiêu cực của công nghệ kỹ thuật số đối với đời sống con người và xã hội, nêu được ví dụ minh họa.",
+            "- Nêu được một số nội dung liên quan đến luật công nghệ thông tin, nghị định về sử dụng dịch vụ internet, các khía cạnh pháp lý của việc sở hữu, sử dụng và trao đổi thông tin.",
+            "- Nêu được một số hành vi vi phạm pháp luật, trái đạo đức, thiếu văn hóa khi hoạt động trong môi trường số thông qua một vài ví dụ."
+          ],
+          "yccd_text": "- Trình bày được một số tác động tiêu cực của công nghệ kỹ thuật số đối với đời sống con người và xã hội, nêu được ví dụ minh họa.\n- Nêu được một số nội dung liên quan đến luật công nghệ thông tin, nghị định về sử dụng dịch vụ internet, các khía cạnh pháp lý của việc sở hữu, sử dụng và trao đổi thông tin.\n- Nêu được một số hành vi vi phạm pháp luật, trái đạo đức, thiếu văn hóa khi hoạt động trong môi trường số thông qua một vài ví dụ."
+        },
+        {
+          "stt": "5",
+          "bai_num": "5",
+          "ten_bai": "Bài 5. Tìm hiểu phần mềm mô phỏng",
+          "bai_title": "Tìm hiểu phần mềm mô phỏng",
+          "so_tiet": "7",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "˗ Nêu được ví dụ phần mềm mô phỏng. Nhận ra được ích lợi của phần mềm mô phỏng.",
+          "yccd_bullets": [
+            "- Nêu được ví dụ phần mềm mô phỏng. Nhận ra được ích lợi của phần mềm mô phỏng."
+          ],
+          "yccd_text": "- Nêu được ví dụ phần mềm mô phỏng. Nhận ra được ích lợi của phần mềm mô phỏng."
+        },
+        {
+          "stt": "6",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Thực hành: Khai thác phần mềm mô phỏng",
+          "bai_title": "Thực hành: Khai thác phần mềm mô phỏng",
+          "so_tiet": "8TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "˗ Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.\n˗ Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề.",
+          "yccd_bullets": [
+            "- Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.",
+            "- Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề."
+          ],
+          "yccd_text": "- Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.\n- Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề."
+        },
+        {
+          "stt": "7",
+          "bai_num": "7",
+          "ten_bai": "Kiểm tra giữa học kì I",
+          "bai_title": "Kiểm tra giữa học kì I",
+          "so_tiet": "9",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "8",
+          "bai_num": "6",
+          "ten_bai": "Bài 6. Thực hành: Khai thác phần mềm mô phỏng.",
+          "bai_title": "Thực hành: Khai thác phần mềm mô phỏng.",
+          "so_tiet": "10TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "˗ Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.\n˗ Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề.",
+          "yccd_bullets": [
+            "- Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.",
+            "- Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề."
+          ],
+          "yccd_text": "- Nêu được những kiến thức đã thu nhận từ việc khai thác một vài phần mềm mô phỏng.\n- Nhận biết được sự mô phỏng thế giới thực nhờ máy tính có thể giúp con người khám phá tri thức và giải quyết vấn đề."
+        },
+        {
+          "stt": "9",
+          "bai_num": "7",
+          "ten_bai": "Bài 7. Trình bày thông tin trong trao đổi và hợp tác",
+          "bai_title": "Trình bày thông tin trong trao đổi và hợp tác",
+          "so_tiet": "11",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "˗ Sử dụng được bài trình chiếu và sơ đồ tư duy trong trao đổi thông tin và hợp tác. \n˗ Biết được khả năng đính kèm văn bản, ảnh, video, trang tính vào sơ đồ tư duy.",
+          "yccd_bullets": [
+            "- Sử dụng được bài trình chiếu và sơ đồ tư duy trong trao đổi thông tin và hợp tác.",
+            "- Biết được khả năng đính kèm văn bản, ảnh, video, trang tính vào sơ đồ tư duy."
+          ],
+          "yccd_text": "- Sử dụng được bài trình chiếu và sơ đồ tư duy trong trao đổi thông tin và hợp tác.\n- Biết được khả năng đính kèm văn bản, ảnh, video, trang tính vào sơ đồ tư duy."
+        },
+        {
+          "stt": "10",
+          "bai_num": "8",
+          "ten_bai": "Bài 8. Thực hành: Sử dụng công cụ trực quan trình bày thông tin trong trao đổi và hợp tác",
+          "bai_title": "Thực hành: Sử dụng công cụ trực quan trình bày thông tin trong trao đổi và hợp tác",
+          "so_tiet": "12TH, 13TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "˗ Sử dụng được hình ảnh, biểu đồ, video một cách hợp lý.\n˗ Tạo được sơ đồ tư duy có đính kèm văn bản, hình ảnh, video và trang tính.\n˗ Tạo được bài trình chiếu có sử dụng hình ảnh, biểu đồ và video hợp lý.",
+          "yccd_bullets": [
+            "- Sử dụng được hình ảnh, biểu đồ, video một cách hợp lý.",
+            "- Tạo được sơ đồ tư duy có đính kèm văn bản, hình ảnh, video và trang tính.",
+            "- Tạo được bài trình chiếu có sử dụng hình ảnh, biểu đồ và video hợp lý."
+          ],
+          "yccd_text": "- Sử dụng được hình ảnh, biểu đồ, video một cách hợp lý.\n- Tạo được sơ đồ tư duy có đính kèm văn bản, hình ảnh, video và trang tính.\n- Tạo được bài trình chiếu có sử dụng hình ảnh, biểu đồ và video hợp lý."
+        },
+        {
+          "stt": "11",
+          "bai_num": "9",
+          "ten_bai": "a. Sử dụng bảng tính điện tử nâng cao Bài 9a. Sử dụng công cụ xác thực dữ liệu",
+          "bai_title": "a. Sử dụng công cụ xác thực dữ liệu",
+          "so_tiet": "14,15 TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Sử dụng được công cụ xác thực dữ liệu (Data Validation) của phần mềm bảng tính để giải quyết bài toán quản lí tài chính.",
+          "yccd_bullets": [
+            "- Sử dụng được công cụ xác thực dữ liệu (Data Validation) của phần mềm bảng tính để giải quyết bài toán quản lí tài chính."
+          ],
+          "yccd_text": "- Sử dụng được công cụ xác thực dữ liệu (Data Validation) của phần mềm bảng tính để giải quyết bài toán quản lí tài chính."
+        },
+        {
+          "stt": "12",
+          "bai_num": "10",
+          "ten_bai": "Bài 10a. Sử dụng hàm COUNTIF",
+          "bai_title": "a. Sử dụng hàm COUNTIF",
+          "so_tiet": "16TH",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính.",
+          "yccd_bullets": [
+            "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính."
+          ],
+          "yccd_text": "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính."
+        },
+        {
+          "stt": "13",
+          "bai_num": "13",
+          "ten_bai": "Ôn tập cuối học kì I",
+          "bai_title": "Ôn tập cuối học kì I",
+          "so_tiet": "17",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "14",
+          "bai_num": "14",
+          "ten_bai": "Kiểm tra cuối học kì I",
+          "bai_title": "Kiểm tra cuối học kì I",
+          "so_tiet": "18",
+          "chu_de": "Chủ đề 4: Ứng dụng tin học",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "15",
+          "bai_num": "10",
+          "ten_bai": "Bài 10a. Sử dụng hàm COUNTIF",
+          "bai_title": "a. Sử dụng hàm COUNTIF",
+          "so_tiet": "19TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính.",
+          "yccd_bullets": [
+            "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính."
+          ],
+          "yccd_text": "- Sử dụng được hàm đếm theo điều kiện COUNTIF trong giải quyết bài toán thực tế về quản lý tài chính."
+        },
+        {
+          "stt": "16",
+          "bai_num": "11",
+          "ten_bai": "Bài 11a. Sử dụng hàm SUMIF",
+          "bai_title": "a. Sử dụng hàm SUMIF",
+          "so_tiet": "20, 21TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "˗ Biết sử dụng được hàm tính tổng theo điều kiện SUMTIF trong giải quyết bài toán quản lý tài chính gia đình.",
+          "yccd_bullets": [
+            "- Biết sử dụng được hàm tính tổng theo điều kiện SUMTIF trong giải quyết bài toán quản lý tài chính gia đình."
+          ],
+          "yccd_text": "- Biết sử dụng được hàm tính tổng theo điều kiện SUMTIF trong giải quyết bài toán quản lý tài chính gia đình."
+        },
+        {
+          "stt": "17",
+          "bai_num": "12",
+          "ten_bai": "Bài 12a. Sử dụng hàm IF",
+          "bai_title": "a. Sử dụng hàm IF",
+          "so_tiet": "22, 23TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Sử dụng được hàm điều kiện IF trong giải quyết bài toán thực tiễn về quản lý tài chính.",
+          "yccd_bullets": [
+            "- Sử dụng được hàm điều kiện IF trong giải quyết bài toán thực tiễn về quản lý tài chính."
+          ],
+          "yccd_text": "- Sử dụng được hàm điều kiện IF trong giải quyết bài toán thực tiễn về quản lý tài chính."
+        },
+        {
+          "stt": "18",
+          "bai_num": "13",
+          "ten_bai": "Bài 13a. Hoàn thiện bảng tính quản lí tài chính gia đình",
+          "bai_title": "a. Hoàn thiện bảng tính quản lí tài chính gia đình",
+          "so_tiet": "24, 25TH",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Tạo được trong tính tổng hợp thông tin thu, chi gia đình.\n- Hoàn thiện bảng tính quản lý tài chính gia đình.",
+          "yccd_bullets": [
+            "- Tạo được trong tính tổng hợp thông tin thu, chi gia đình.",
+            "- Hoàn thiện bảng tính quản lý tài chính gia đình."
+          ],
+          "yccd_text": "- Tạo được trong tính tổng hợp thông tin thu, chi gia đình.\n- Hoàn thiện bảng tính quản lý tài chính gia đình."
+        },
+        {
+          "stt": "19",
+          "bai_num": "19",
+          "ten_bai": "Kiểm tra giữa học kì II",
+          "bai_title": "Kiểm tra giữa học kì II",
+          "so_tiet": "26",
+          "chu_de": "HỌC KÌ II",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "20",
+          "bai_num": "14",
+          "ten_bai": "Bài 14. Giải quyết vấn đề",
+          "bai_title": "Giải quyết vấn đề",
+          "so_tiet": "27,28",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Trình bày được quá trình giải quyết vấn đề và mô tả được giải pháp dưới dạng thuật toán (hoặc bằng phương pháp liệt kê các bước hoặc bằng sơ đồ khối).",
+          "yccd_bullets": [
+            "- Trình bày được quá trình giải quyết vấn đề và mô tả được giải pháp dưới dạng thuật toán (hoặc bằng phương pháp liệt kê các bước hoặc bằng sơ đồ khối)."
+          ],
+          "yccd_text": "- Trình bày được quá trình giải quyết vấn đề và mô tả được giải pháp dưới dạng thuật toán (hoặc bằng phương pháp liệt kê các bước hoặc bằng sơ đồ khối)."
+        },
+        {
+          "stt": "21",
+          "bai_num": "15",
+          "ten_bai": "Bài 15. Bài toán tin học",
+          "bai_title": "Bài toán tin học",
+          "so_tiet": "29,30",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Giải thích được trong quy trình giải quyết vấn đề có những bước (những vấn đề nhỏ hơn) có thể chuyển giao cho máy tính thực hiện, nêu được ví dụ minh họa\n- Giải thích được khái niệm bài toán trong tin học là một nhiệm vụ có thể giao cho máy tính thực hiện, nêu được ví dụ minh họa.\n- Nêu được quy trình con người giao bài toán cho máy tính giải quyết.",
+          "yccd_bullets": [
+            "- Giải thích được trong quy trình giải quyết vấn đề có những bước (những vấn đề nhỏ hơn) có thể chuyển giao cho máy tính thực hiện, nêu được ví dụ minh họa",
+            "- Giải thích được khái niệm bài toán trong tin học là một nhiệm vụ có thể giao cho máy tính thực hiện, nêu được ví dụ minh họa.",
+            "- Nêu được quy trình con người giao bài toán cho máy tính giải quyết."
+          ],
+          "yccd_text": "- Giải thích được trong quy trình giải quyết vấn đề có những bước (những vấn đề nhỏ hơn) có thể chuyển giao cho máy tính thực hiện, nêu được ví dụ minh họa\n- Giải thích được khái niệm bài toán trong tin học là một nhiệm vụ có thể giao cho máy tính thực hiện, nêu được ví dụ minh họa.\n- Nêu được quy trình con người giao bài toán cho máy tính giải quyết."
+        },
+        {
+          "stt": "22",
+          "bai_num": "16",
+          "ten_bai": "Bài 16. Thực hành: Lập chương trình máy tính",
+          "bai_title": "Thực hành: Lập chương trình máy tính",
+          "so_tiet": "31TH, 32TH",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Sử dụng được cấu trúc tuần tự, rẽ nhánh, lặp trong mô tả thuật toán.\n- Giải thích được chương trình là bản mô tả thuật toán= ngôn ngữ mà máy tính có thể “hiểu” và thực hiện.",
+          "yccd_bullets": [
+            "- Sử dụng được cấu trúc tuần tự, rẽ nhánh, lặp trong mô tả thuật toán.",
+            "- Giải thích được chương trình là bản mô tả thuật toán= ngôn ngữ mà máy tính có thể “hiểu” và thực hiện."
+          ],
+          "yccd_text": "- Sử dụng được cấu trúc tuần tự, rẽ nhánh, lặp trong mô tả thuật toán.\n- Giải thích được chương trình là bản mô tả thuật toán= ngôn ngữ mà máy tính có thể “hiểu” và thực hiện."
+        },
+        {
+          "stt": "23",
+          "bai_num": "23",
+          "ten_bai": "Ôn tập cuối học kì II",
+          "bai_title": "Ôn tập cuối học kì II",
+          "so_tiet": "33",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành",
+          "yccd_bullets": [
+            "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành"
+          ],
+          "yccd_text": "- Củng cố kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành"
+        },
+        {
+          "stt": "24",
+          "bai_num": "24",
+          "ten_bai": "Kiểm tra cuối học kì II",
+          "bai_title": "Kiểm tra cuối học kì II",
+          "so_tiet": "34",
+          "chu_de": "Chủ đề 5. Giải quyết vấn đề với sự trợ giúp của máy tính",
+          "yccd_raw": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành.",
+          "yccd_bullets": [
+            "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+          ],
+          "yccd_text": "- Nắm vững kiến thức để làm đúng các bài tập trắc nghiệm, tự luận, thực hành."
+        },
+        {
+          "stt": "25",
+          "bai_num": "17",
+          "ten_bai": "Bài 17. Tin học và thế giới nghề nghiệp",
+          "bai_title": "Tin học và thế giới nghề nghiệp",
+          "so_tiet": "35",
+          "chu_de": "Chủ đề 6. Hướng nghiệp với Tin học",
+          "yccd_raw": "- Trình bày được công việc đặc thù và sản phẩm chính của người làm tin học trong ít nhất 3 nhóm nghề.\n- Nêu và giải thích được ý kiến cá nhân (thích hay không thích,…) về một nhóm nghề nào đó.\n- Nhận biết được đặc trưng cơ bản của nhóm nghệ thuộc hướng Tin học ứng dụng và nhóm nghề thuộc hướng Khoa học máy tính.\n- Tìm hiểu được (thông qua internet và những kênh thông tin khác) công việc ở một số doanh nghiệp, công ty có sử dụng nhân lực thuộc các nhóm ngành đã được giới thiệu.\n- Giải thích được cả nam và nữ đều có thể thích hợp với các ngành nghề trong lĩnh vực tin học.",
+          "yccd_bullets": [
+            "- Trình bày được công việc đặc thù và sản phẩm chính của người làm tin học trong ít nhất 3 nhóm nghề.",
+            "- Nêu và giải thích được ý kiến cá nhân (thích hay không thích,…) về một nhóm nghề nào đó.",
+            "- Nhận biết được đặc trưng cơ bản của nhóm nghệ thuộc hướng Tin học ứng dụng và nhóm nghề thuộc hướng Khoa học máy tính.",
+            "- Tìm hiểu được (thông qua internet và những kênh thông tin khác) công việc ở một số doanh nghiệp, công ty có sử dụng nhân lực thuộc các nhóm ngành đã được giới thiệu.",
+            "- Giải thích được cả nam và nữ đều có thể thích hợp với các ngành nghề trong lĩnh vực tin học."
+          ],
+          "yccd_text": "- Trình bày được công việc đặc thù và sản phẩm chính của người làm tin học trong ít nhất 3 nhóm nghề.\n- Nêu và giải thích được ý kiến cá nhân (thích hay không thích,…) về một nhóm nghề nào đó.\n- Nhận biết được đặc trưng cơ bản của nhóm nghệ thuộc hướng Tin học ứng dụng và nhóm nghề thuộc hướng Khoa học máy tính.\n- Tìm hiểu được (thông qua internet và những kênh thông tin khác) công việc ở một số doanh nghiệp, công ty có sử dụng nhân lực thuộc các nhóm ngành đã được giới thiệu.\n- Giải thích được cả nam và nữ đều có thể thích hợp với các ngành nghề trong lĩnh vực tin học."
+        }
+      ]
+    }
+  }
+}

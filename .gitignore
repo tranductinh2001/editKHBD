@@ -26,3 +26,11 @@ ENV/
 Thumbs.db
 .vscode/
 .idea/
+
+# Temporary test outputs & lock files
+~$*
+scratch/
+test_output_thcs/
+test_nls_suite_output/
+*.docx.tmp
+test_*.docx

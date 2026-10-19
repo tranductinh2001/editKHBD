@@ -12,8 +12,8 @@ import docx
 from docx.shared import Pt, Inches, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
-from docx.oxml import OxmlElement
-from docx.oxml.ns import qn
+from docx.oxml import OxmlElement, parse_xml
+from docx.oxml.ns import qn, nsdecls
 from docx.oxml.table import CT_Tbl
 from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
@@ -1037,6 +1037,61 @@ def calculate_week_dates(week_num, start_date_str="2026-09-07", date_format="d2_
     except Exception:
         return "../../2026"
 
+def autofit_table_to_content(table):
+    """
+    Tự động căn chỉnh và co giãn bảng theo nội dung (AutoFit to Contents):
+    - Đặt table.autofit = True
+    - Thiết lập w:tblLayout w:type="autofit"
+    - Thiết lập w:tblW w:type="auto" w:w="0"
+    - Xoá cố định cứng độ rộng ô (w:tcW w:type="auto") để Word tự động co giãn theo nội dung
+    - Chống cắt đôi hàng giữa 2 trang (w:cantSplit trên mọi hàng)
+    - Căn giữa bảng (WD_TABLE_ALIGNMENT.CENTER)
+    - Đặt padding lề ô vừa vặn, chống tràn trang A4
+    """
+    try:
+        table.alignment = WD_TABLE_ALIGNMENT.CENTER
+        table.autofit = True
+
+        tblPr = table._tbl.tblPr
+
+        # 1. tblLayout: autofit
+        tblLayout = tblPr.find(qn('w:tblLayout'))
+        if tblLayout is None:
+            tblLayout = parse_xml(f'<w:tblLayout {nsdecls("w")} w:type="autofit"/>')
+            tblPr.append(tblLayout)
+        else:
+            tblLayout.set(qn('w:type'), 'autofit')
+
+        # 2. tblW: auto
+        tblW = tblPr.find(qn('w:tblW'))
+        if tblW is None:
+            tblW = parse_xml(f'<w:tblW {nsdecls("w")} w:w="0" w:type="auto"/>')
+            tblPr.append(tblW)
+        else:
+            tblW.set(qn('w:w'), "0")
+            tblW.set(qn('w:type'), "auto")
+
+        # 3. Lề padding ô bảng chuẩn (top/bottom: 80 dxa, left/right: 120 dxa)
+        tblCellMar = tblPr.find(qn('w:tblCellMar'))
+        if tblCellMar is None:
+            mar_xml = f'<w:tblCellMar {nsdecls("w")}><w:top w:w="80" w:type="dxa"/><w:bottom w:w="80" w:type="dxa"/><w:left w:w="120" w:type="dxa"/><w:right w:w="120" w:type="dxa"/></w:tblCellMar>'
+            tblPr.append(parse_xml(mar_xml))
+
+        # 4. Cho phép Word tự động co giãn từng ô và chống ngắt hàng
+        for row in table.rows:
+            trPr = row._tr.get_or_add_trPr()
+            if trPr.find(qn('w:cantSplit')) is None:
+                trPr.append(parse_xml(f'<w:cantSplit {nsdecls("w")}/>'))
+
+            for cell in row.cells:
+                tcPr = cell._tc.get_or_add_tcPr()
+                tcW = tcPr.find(qn('w:tcW'))
+                if tcW is not None:
+                    tcW.set(qn('w:w'), "0")
+                    tcW.set(qn('w:type'), "auto")
+    except Exception as e:
+        print(f"autofit_table_to_content error: {e}")
+
 def format_cv5512_standard(doc, config):
     """
     Chuẩn hoá toàn bộ định dạng giáo án theo Công văn 5512/BGDĐT-GDTrH:
@@ -1118,8 +1173,12 @@ def format_cv5512_standard(doc, config):
 
         # 2. Format tables (ngoại trừ bảng header 1x2 đầu tiên và bảng signature cuối cùng)
         tables_to_format = doc.tables[1:-1] if len(doc.tables) > 2 else doc.tables
+        autofit_enabled = config.get("autofit_tables", True) if config else True
         for tbl in tables_to_format:
-            tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
+            if autofit_enabled:
+                autofit_table_to_content(tbl)
+            else:
+                tbl.alignment = WD_TABLE_ALIGNMENT.CENTER
             for r_idx, row in enumerate(tbl.rows):
                 for cell in row.cells:
                     for cp in cell.paragraphs:

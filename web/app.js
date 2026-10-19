@@ -130,6 +130,8 @@ const cfgOptHeader = document.getElementById("cfg-opt-header");
 const cfgOptFooter = document.getElementById("cfg-opt-footer");
 const cfgOptApproval = document.getElementById("cfg-opt-approval");
 const cfgOptBorder = document.getElementById("cfg-opt-border");
+const cfgOptAutofitTable = document.getElementById("cfg-opt-autofit-table");
+const cfgOptAutofitTableQuick = document.getElementById("cfg-opt-autofit-table-quick");
 const selectTemplateStyle = document.getElementById("select-template-style");
 const cfgMarginTop = document.getElementById("cfg-margin-top");
 const cfgMarginBottom = document.getElementById("cfg-margin-bottom");
@@ -273,6 +275,10 @@ function populateConfigForm(cfg) {
   if (cfg.enable_footer !== undefined && cfgOptFooter) cfgOptFooter.checked = cfg.enable_footer;
   if (cfg.enable_approval_block !== undefined && cfgOptApproval) cfgOptApproval.checked = cfg.enable_approval_block;
   if (cfg.table_border !== undefined && cfgOptBorder) cfgOptBorder.checked = cfg.table_border;
+  if (cfg.autofit_tables !== undefined) {
+    if (cfgOptAutofitTable) cfgOptAutofitTable.checked = cfg.autofit_tables;
+    if (cfgOptAutofitTableQuick) cfgOptAutofitTableQuick.checked = cfg.autofit_tables;
+  }
   if (cfg.template_style && selectTemplateStyle) selectTemplateStyle.value = cfg.template_style;
 
   if (cfg.school_year_start_date && cfgStartDate) cfgStartDate.value = cfg.school_year_start_date;
@@ -1385,6 +1391,7 @@ async function processBatch(filesToRun = null) {
     signer_dept: cfgSignerDept ? cfgSignerDept.value.trim() : "",
     format_5512: cfgOptFormat5512 ? cfgOptFormat5512.checked : true,
     table_border: cfgOptBorder ? cfgOptBorder.checked : false,
+    autofit_tables: cfgOptAutofitTable ? cfgOptAutofitTable.checked : true,
     margin_top_cm: parseFloat(cfgMarginTop ? cfgMarginTop.value : 2.0) || 2.0,
     margin_bottom_cm: parseFloat(cfgMarginBottom ? cfgMarginBottom.value : 2.0) || 2.0,
     margin_left_cm: parseFloat(cfgMarginLeft ? cfgMarginLeft.value : 2.0) || 2.0,
@@ -2949,7 +2956,15 @@ function setupEventListeners() {
     }
   });
 
-  const visualCheckboxes = [cfgOptHeader, cfgOptFooter, cfgOptApproval, cfgOptBorder, cfgAutoDate, cfgOptFormat5512];
+  const visualCheckboxes = [cfgOptHeader, cfgOptFooter, cfgOptApproval, cfgOptBorder, cfgAutoDate, cfgOptFormat5512, cfgOptAutofitTable];
+  if (cfgOptAutofitTable && cfgOptAutofitTableQuick) {
+    cfgOptAutofitTable.addEventListener("change", () => {
+      cfgOptAutofitTableQuick.checked = cfgOptAutofitTable.checked;
+    });
+    cfgOptAutofitTableQuick.addEventListener("change", () => {
+      cfgOptAutofitTable.checked = cfgOptAutofitTableQuick.checked;
+    });
+  }
   visualCheckboxes.forEach(cb => {
     if (cb) cb.addEventListener("change", updateLivePreview);
   });
